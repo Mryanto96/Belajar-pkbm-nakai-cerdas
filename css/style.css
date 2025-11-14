@@ -1194,6 +1194,7 @@ footer {
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        align-self: center;
     }
 
     .hero-buttons .btn {
@@ -1215,6 +1216,7 @@ footer {
     .btn-detail {
         width: 100%;
         max-width: 250px;
+        align-items: center;
     }
 
     .hero-content {
