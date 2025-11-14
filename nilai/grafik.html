@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafik Nilai PKBM Nakai Cerdas Belajar | Pusat Kegiatan Belajar Masyarakat</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chart-container {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-img">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">PKBM</span>
+                        <span class="logo-sub">Nakai Cerdas Belajar</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="../index.html">Beranda</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../profil/index.html">Profil</a>
+                    <div class="sub-menu">
+                        <a href="../profil/sejarah.html">Sejarah</a>
+                        <a href="../profil/visi-misi.html">Visi & Misi</a>
+                        <a href="../profil/program.html">Program</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../struktur/index.html">Struktur</a>
+                    <div class="sub-menu">
+                        <a href="../struktur/pengurus.html">Pengurus</a>
+                        <a href="../struktur/tutor.html">Tutor</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../siswa/index.html">Data Siswa</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="index.html">Nilai</a>
+                    <div class="sub-menu">
+                        <a href="index.html">Data Nilai</a>
+                        <a href="grafik.html">Grafik</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../lpj/index.html">LPJ & Keuangan</a>
+                    <div class="sub-menu">
+                        <a href="../lpj/pemasukan.html">Pemasukan</a>
+                        <a href="../lpj/pengeluaran.html">Pengeluaran</a>
+                        <a href="../lpj/saldo.html">Saldo</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../gallery/index.html">Gallery</a>
+                </div>
+            </nav>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <br><br>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Grafik <span>Nilai</span></h1>
+                <p>Visualisasi data perkembangan belajar peserta didik PKBM Nakai Cerdas Belajar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grafik Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Overview Cards -->
+            <div class="cards-grid" style="margin-bottom: 3rem;">
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Perbandingan Nilai</h3>
+                    <p>Analisis perbandingan nilai antar mata pelajaran dan siswa</p>
+                </div>
+
+                <div class="card fade-in delay-1">
+                    <div class="card-icon">
+                        <i class="fas fa-trend-up"></i>
+                    </div>
+                    <h3>Tren Pembelajaran</h3>
+                    <p>Monitoring perkembangan nilai dari waktu ke waktu</p>
+                </div>
+
+                <div class="card fade-in delay-2">
+                    <div class="card-icon">
+                        <i class="fas fa-analytics"></i>
+                    </div>
+                    <h3>Analisis Detail</h3>
+                    <p>Pemahaman mendalam tentang performa akademik siswa</p>
+                </div>
+            </div>
+
+            <!-- Main Chart -->
+            <div class="card fade-in">
+                <div class="chart-container">
+                    <canvas id="nilaiChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Additional Analysis -->
+            <div class="cards-grid" style="margin-top: 3rem;">
+                <!-- Subject Performance -->
+                <div class="card fade-in">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Performansi per Mata Pelajaran</h3>
+
+                    <div style="margin-top: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                            <span>Matematika</span>
+                            <div
+                                style="width: 60%; background: rgba(46, 139, 87, 0.2); border-radius: 10px; overflow: hidden;">
+                                <div style="width: 77.5%; height: 20px; background: var(--primary);"></div>
+                            </div>
+                            <span style="font-weight: bold;">77.5</span>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                            <span>Bahasa Indonesia</span>
+                            <div
+                                style="width: 60%; background: rgba(46, 139, 87, 0.2); border-radius: 10px; overflow: hidden;">
+                                <div style="width: 80%; height: 20px; background: var(--accent);"></div>
+                            </div>
+                            <span style="font-weight: bold;">80.0</span>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                            <span>IPA</span>
+                            <div
+                                style="width: 60%; background: rgba(46, 139, 87, 0.2); border-radius: 10px; overflow: hidden;">
+                                <div style="width: 79.6%; height: 20px; background: var(--secondary);"></div>
+                            </div>
+                            <span style="font-weight: bold;">79.6</span>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                            <span>IPS</span>
+                            <div
+                                style="width: 60%; background: rgba(46, 139, 87, 0.2); border-radius: 10px; overflow: hidden;">
+                                <div style="width: 82.7%; height: 20px; background: #dc143c;"></div>
+                            </div>
+                            <span style="font-weight: bold;">82.7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Ranking -->
+                <div class="card fade-in delay-1">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Ranking Siswa</h3>
+
+                    <div style="margin-top: 1rem;">
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                            <div
+                                style="background: gold; color: var(--darker); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold;">
+                                1
+                            </div>
+                            <div style="flex: 1;">
+                                <strong>Martha Wenda</strong>
+                                <div style="color: var(--primary); font-size: 0.9rem;">Rata-rata: 88.4</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                            <div
+                                style="background: silver; color: var(--darker); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold;">
+                                2
+                            </div>
+                            <div style="flex: 1;">
+                                <strong>Yuliana Tabuni</strong>
+                                <div style="color: var(--primary); font-size: 0.9rem;">Rata-rata: 88.1</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                            <div
+                                style="background: #cd7f32; color: var(--darker); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold;">
+                                3
+                            </div>
+                            <div style="flex: 1;">
+                                <strong>Ruth Yogi</strong>
+                                <div style="color: var(--primary); font-size: 0.9rem;">Rata-rata: 85.0</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 1rem; padding: 1rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                            <div
+                                style="background: var(--primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold;">
+                                4
+                            </div>
+                            <div style="flex: 1;">
+                                <strong>Maria Wanimbo</strong>
+                                <div style="color: var(--primary); font-size: 0.9rem;">Rata-rata: 87.0</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; padding: 1rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                            <div
+                                style="background: var(--primary); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold;">
+                                5
+                            </div>
+                            <div style="flex: 1;">
+                                <strong>Debora Mabel</strong>
+                                <div style="color: var(--primary); font-size: 0.9rem;">Rata-rata: 84.3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insights -->
+                <div class="card fade-in delay-2">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Analisis & Insight</h3>
+
+                    <div style="margin-top: 1rem;">
+                        <div
+                            style="background: rgba(46, 139, 87, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <h4><i class="fas fa-check-circle" style="color: var(--primary);"></i> Kekuatan</h4>
+                            <p>Nilai IPS dan PJOK menunjukkan performa terbaik dengan rata-rata di atas 82</p>
+                        </div>
+
+                        <div
+                            style="background: rgba(255, 165, 0, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <h4><i class="fas fa-exclamation-triangle" style="color: var(--secondary);"></i> Area
+                                Perbaikan</h4>
+                            <p>Matematika membutuhkan perhatian khusus dengan rata-rata terendah (77.5)</p>
+                        </div>
+
+                        <div style="background: rgba(65, 105, 225, 0.1); padding: 1rem; border-radius: 0.5rem;">
+                            <h4><i class="fas fa-lightbulb" style="color: var(--accent);"></i> Rekomendasi</h4>
+                            <p>Perlu tambahan jam belajar untuk matematika dan pendekatan pembelajaran yang lebih
+                                praktis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="card fade-in" style="margin-top: 3rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Tren Perkembangan Nilai</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--primary);">↗ 4.8%</div>
+                        <p>Peningkatan rata-rata kelas dari semester sebelumnya</p>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--secondary);">8/10</div>
+                        <p>Siswa mencapai target nilai minimal</p>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--accent);">85%</div>
+                        <p>Siswa menunjukkan peningkatan konsisten</p>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: #dc143c;">90%</div>
+                        <p>Tingkat kehadiran dalam pembelajaran</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="btn">
+                    <i class="fas fa-arrow-left"></i> Kembali ke Data Nilai
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <div class="logo-text">
+                            <span class="logo-main">PKBM</span>
+                            <span class="logo-sub">Nakai Cerdas Belajar</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Membangun masyarakat cerdas dan mandiri melalui pendidikan nonformal</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PKBM Nakai Cerdas Belajar. All rights reserved. | Nakai Distrik Pulau Tiga</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/charts.js"></script>
+</body>
+
+</html>

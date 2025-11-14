@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Nilai Siswa PKBM Nakai Cerdas Belajar | Pusat Kegiatan Belajar Masyarakat</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-img">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">PKBM</span>
+                        <span class="logo-sub">Nakai Cerdas Belajar</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="../index.html">Beranda</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../profil/index.html">Profil</a>
+                    <div class="sub-menu">
+                        <a href="../profil/sejarah.html">Sejarah</a>
+                        <a href="../profil/visi-misi.html">Visi & Misi</a>
+                        <a href="../profil/program.html">Program</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../struktur/index.html">Struktur</a>
+                    <div class="sub-menu">
+                        <a href="../struktur/pengurus.html">Pengurus</a>
+                        <a href="../struktur/tutor.html">Tutor</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../siswa/index.html">Data Siswa</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="index.html">Nilai</a>
+                    <div class="sub-menu">
+                        <a href="index.html">Data Nilai</a>
+                        <a href="grafik.html">Grafik</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../lpj/index.html">LPJ & Keuangan</a>
+                    <div class="sub-menu">
+                        <a href="../lpj/pemasukan.html">Pemasukan</a>
+                        <a href="../lpj/pengeluaran.html">Pengeluaran</a>
+                        <a href="../lpj/saldo.html">Saldo</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../gallery/index.html">Gallery</a>
+                </div>
+            </nav>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <br><br>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Data <span>Nilai</span></h1>
+                <p>Monitoring dan evaluasi perkembangan belajar peserta didik PKBM Nakai Cerdas Belajar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nilai Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Quick Stats -->
+            <div class="cards-grid" style="margin-bottom: 3rem;">
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Rata-rata Kelas</h3>
+                    <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary); margin: 1rem 0;">78.2</div>
+                    <p>Nilai rata-rata semua siswa</p>
+                </div>
+
+                <div class="card fade-in delay-1">
+                    <div class="card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Nilai Tertinggi</h3>
+                    <div style="font-size: 2.5rem; font-weight: bold; color: var(--secondary); margin: 1rem 0;">88.4
+                    </div>
+                    <p>Martha Wenda - Keterampilan Komputer</p>
+                </div>
+
+                <div class="card fade-in delay-2">
+                    <div class="card-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Mata Pelajaran</h3>
+                    <div style="font-size: 2.5rem; font-weight: bold; color: var(--accent); margin: 1rem 0;">7</div>
+                    <p>Jumlah mata pelajaran</p>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="card fade-in">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Rekap Nilai Siswa Semester Genap 2023</h2>
+
+                <div class="table-container">
+                    <table class="data-table" id="nilaiTable">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Matematika</th>
+                                <th>Bahasa Indonesia</th>
+                                <th>IPA</th>
+                                <th>IPS</th>
+                                <th>PKN</th>
+                                <th>SBdP</th>
+                                <th>PJOK</th>
+                                <th>Rata-rata</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-id="1">
+                                <td class="clickable">Yohanis Kambu</td>
+                                <td>75</td>
+                                <td>80</td>
+                                <td>78</td>
+                                <td>82</td>
+                                <td>76</td>
+                                <td>85</td>
+                                <td>88</td>
+                                <td><strong>80.6</strong></td>
+                                <td><button class="btn-detail" onclick="showNilaiDetail(1)">Detail</button></td>
+                            </tr>
+                            <tr data-id="2">
+                                <td class="clickable">Martha Wenda</td>
+                                <td>85</td>
+                                <td>88</td>
+                                <td>90</td>
+                                <td>92</td>
+                                <td>87</td>
+                                <td>89</td>
+                                <td>91</td>
+                                <td><strong>88.4</strong></td>
+                                <td><button class="btn-detail" onclick="showNilaiDetail(2)">Detail</button></td>
+                            </tr>
+                            <tr data-id="3">
+                                <td class="clickable">Alberth Dimara</td>
+                                <td>70</td>
+                                <td>75</td>
+                                <td>72</td>
+                                <td>78</td>
+                                <td>74</td>
+                                <td>80</td>
+                                <td>82</td>
+                                <td><strong>75.9</strong></td>
+                                <td><button class="btn-detail" onclick="showNilaiDetail(3)">Detail</button></td>
+                            </tr>
+                            <tr data-id="4">
+                                <td class="clickable">Yuliana Tabuni</td>
+                                <td>90</td>
+                                <td>85</td>
+                                <td>88</td>
+                                <td>87</td>
+                                <td>89</td>
+                                <td>92</td>
+                                <td>86</td>
+                                <td><strong>88.1</strong></td>
+                                <td><button class="btn-detail" onclick="showNilaiDetail(4)">Detail</button></td>
+                            </tr>
+                            <tr data-id="5">
+                                <td class="clickable">Samuel Kogoya</td>
+                                <td>65</td>
+                                <td>70</td>
+                                <td>68</td>
+                                <td>72</td>
+                                <td>66</td>
+                                <td>75</td>
+                                <td>78</td>
+                                <td><strong>70.6</strong></td>
+                                <td><button class="btn-detail" onclick="showNilaiDetail(5)">Detail</button></td>
+                            </tr>
+                            <tr data-id="6">
+                                <td class="clickable">Debora Mabel</td>
+                                <td>82</td>
+                                <td>85</td>
+                                <td>80</td>
+                                <td>84</td>
+                                <td>83</td>
+                                <td>87</td>
+                                <td>89</td>
+                                <td><strong>84.3</strong></td>
+                                <td><button class="btn-detail" onclick="showNilaiDetail(6)">Detail</button></td>
+                            </tr>
+                            <tr data-id="7">
+                                <td class="clickable">Yakobus Noriwari</td>
+                                <td>78</td>
+                                <td>82</td>
+                                <td>79</td>
+                                <td>81</td>
+                                <td>80</td>
+                                <td>83</td>
+                                <td>85</td>
+                                <td><strong>81.1</strong></td>
+                                <td><button class="btn-detail" onclick="showNilaiDetail(7)">Detail</button></td>
+                            </tr>
+                            <tr data-id="8">
+                                <td class="clickable">Maria Wanimbo</td>
+                                <td>88</td>
+                                <td>84</td>
+                                <td>86</td>
+                                <td>89</td>
+                                <td>85</td>
+                                <td>90</td>
+                                <td>87</td>
+                                <td><strong>87.0</strong></td>
+                                <td><button class="btn-detail" onclick="showNilaiDetail(8)">Detail</button></td>
+                            </tr>
+                            <tr data-id="9">
+                                <td class="clickable">Benny Wandikbo</td>
+                                <td>72</td>
+                                <td>68</td>
+                                <td>70</td>
+                                <td>75</td>
+                                <td>69</td>
+                                <td>78</td>
+                                <td>80</td>
+                                <td><strong>73.1</strong></td>
+                                <td><button class="btn-detail" onclick="showNilaiDetail(9)">Detail</button></td>
+                            </tr>
+                            <tr data-id="10">
+                                <td class="clickable">Ruth Yogi</td>
+                                <td>80</td>
+                                <td>83</td>
+                                <td>85</td>
+                                <td>87</td>
+                                <td>82</td>
+                                <td>88</td>
+                                <td>90</td>
+                                <td><strong>85.0</strong></td>
+                                <td><button class="btn-detail" onclick="showNilaiDetail(10)">Detail</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Subject Performance -->
+            <div class="card fade-in delay-1" style="margin-top: 3rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Performansi Mata Pelajaran</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: bold; color: var(--primary);">77.5</div>
+                        <h4>Matematika</h4>
+                        <p>Rata-rata kelas</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(65, 105, 225, 0.1); border-radius: 0.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: bold; color: var(--accent);">80.0</div>
+                        <h4>Bahasa Indonesia</h4>
+                        <p>Rata-rata kelas</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(255, 165, 0, 0.1); border-radius: 0.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: bold; color: var(--secondary);">79.6</div>
+                        <h4>IPA</h4>
+                        <p>Rata-rata kelas</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(220, 20, 60, 0.1); border-radius: 0.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: bold; color: #dc143c;">82.7</div>
+                        <h4>IPS</h4>
+                        <p>Rata-rata kelas</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(148, 0, 211, 0.1); border-radius: 0.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: bold; color: #9400d3;">79.1</div>
+                        <h4>PKN</h4>
+                        <p>Rata-rata kelas</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(30, 144, 255, 0.1); border-radius: 0.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: bold; color: #1e90ff;">84.7</div>
+                        <h4>SBdP</h4>
+                        <p>Rata-rata kelas</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(255, 69, 0, 0.1); border-radius: 0.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: bold; color: #ff4500;">85.6</div>
+                        <h4>PJOK</h4>
+                        <p>Rata-rata kelas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grade Distribution -->
+            <div class="card fade-in delay-2" style="margin-top: 3rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Distribusi Nilai</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h3><i class="fas fa-chart-bar" style="color: var(--primary); margin-right: 0.5rem;"></i>
+                            Kategori Nilai</h3>
+                        <div style="margin-top: 1rem;">
+                            <div
+                                style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; padding: 0.5rem; background: rgba(46, 139, 87, 0.2); border-radius: 0.3rem;">
+                                <span>Sangat Baik (85-100):</span>
+                                <span style="font-weight: bold;">3 siswa</span>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; padding: 0.5rem; background: rgba(144, 238, 144, 0.2); border-radius: 0.3rem;">
+                                <span>Baik (75-84):</span>
+                                <span style="font-weight: bold;">5 siswa</span>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: space-between; padding: 0.5rem; background: rgba(255, 165, 0, 0.2); border-radius: 0.3rem;">
+                                <span>Cukup (65-74):</span>
+                                <span style="font-weight: bold;">2 siswa</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3><i class="fas fa-trophy" style="color: var(--primary); margin-right: 0.5rem;"></i>
+                            Pencapaian</h3>
+                        <div style="margin-top: 1rem;">
+                            <div
+                                style="background: rgba(46, 139, 87, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                                <h4>Nilai Tertinggi</h4>
+                                <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">92</div>
+                                <p>Yuliana Tabuni - SBdP</p>
+                            </div>
+                            <div style="background: rgba(255, 165, 0, 0.1); padding: 1rem; border-radius: 0.5rem;">
+                                <h4>Perbaikan Terbanyak</h4>
+                                <div style="font-size: 1.5rem; font-weight: bold; color: var(--secondary);">+18</div>
+                                <p>Samuel Kogoya - Matematika</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="grafik.html" class="btn">
+                    <i class="fas fa-chart-bar"></i> Lihat Grafik Nilai
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <div class="logo-text">
+                            <span class="logo-main">PKBM</span>
+                            <span class="logo-sub">Nakai Cerdas Belajar</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Membangun masyarakat cerdas dan mandiri melalui pendidikan nonformal</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PKBM Nakai Cerdas Belajar. All rights reserved. | Nakai Distrik Pulau Tiga</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/modal.js"></script>
+    <script>
+        // Data nilai siswa Papua (sesuai dengan data siswa)
+        if (!window.PKBM) window.PKBM = {};
+        if (!window.PKBM.nilaiDataPapua) {
+            window.PKBM.nilaiDataPapua = [
+                {
+                    id: 1,
+                    nama: "Yohanis Kambu",
+                    program: "Keaksaraan",
+                    nilai: {
+                        matematika: 75,
+                        bahasaIndonesia: 80,
+                        ipa: 78,
+                        ips: 82,
+                        pkn: 76,
+                        sbdp: 85,
+                        pjok: 88
+                    },
+                    rataRata: 80.6
+                },
+                {
+                    id: 2,
+                    nama: "Martha Wenda",
+                    program: "Keterampilan Komputer",
+                    nilai: {
+                        matematika: 85,
+                        bahasaIndonesia: 88,
+                        ipa: 90,
+                        ips: 92,
+                        pkn: 87,
+                        sbdp: 89,
+                        pjok: 91
+                    },
+                    rataRata: 88.4
+                },
+                {
+                    id: 3,
+                    nama: "Alberth Dimara",
+                    program: "Kesetaraan Paket A",
+                    nilai: {
+                        matematika: 70,
+                        bahasaIndonesia: 75,
+                        ipa: 72,
+                        ips: 78,
+                        pkn: 74,
+                        sbdp: 80,
+                        pjok: 82
+                    },
+                    rataRata: 75.9
+                },
+                {
+                    id: 4,
+                    nama: "Yuliana Tabuni",
+                    program: "Kerajinan Tangan",
+                    nilai: {
+                        matematika: 90,
+                        bahasaIndonesia: 85,
+                        ipa: 88,
+                        ips: 87,
+                        pkn: 89,
+                        sbdp: 92,
+                        pjok: 86
+                    },
+                    rataRata: 88.1
+                },
+                {
+                    id: 5,
+                    nama: "Samuel Kogoya",
+                    program: "Keaksaraan",
+                    nilai: {
+                        matematika: 65,
+                        bahasaIndonesia: 70,
+                        ipa: 68,
+                        ips: 72,
+                        pkn: 66,
+                        sbdp: 75,
+                        pjok: 78
+                    },
+                    rataRata: 70.6
+                },
+                {
+                    id: 6,
+                    nama: "Debora Mabel",
+                    program: "Keterampilan Komputer",
+                    nilai: {
+                        matematika: 82,
+                        bahasaIndonesia: 85,
+                        ipa: 80,
+                        ips: 84,
+                        pkn: 83,
+                        sbdp: 87,
+                        pjok: 89
+                    },
+                    rataRata: 84.3
+                },
+                {
+                    id: 7,
+                    nama: "Yakobus Noriwari",
+                    program: "Kesetaraan Paket B",
+                    nilai: {
+                        matematika: 78,
+                        bahasaIndonesia: 82,
+                        ipa: 79,
+                        ips: 81,
+                        pkn: 80,
+                        sbdp: 83,
+                        pjok: 85
+                    },
+                    rataRata: 81.1
+                },
+                {
+                    id: 8,
+                    nama: "Maria Wanimbo",
+                    program: "Kerajinan Tangan",
+                    nilai: {
+                        matematika: 88,
+                        bahasaIndonesia: 84,
+                        ipa: 86,
+                        ips: 89,
+                        pkn: 85,
+                        sbdp: 90,
+                        pjok: 87
+                    },
+                    rataRata: 87.0
+                },
+                {
+                    id: 9,
+                    nama: "Benny Wandikbo",
+                    program: "Keaksaraan",
+                    nilai: {
+                        matematika: 72,
+                        bahasaIndonesia: 68,
+                        ipa: 70,
+                        ips: 75,
+                        pkn: 69,
+                        sbdp: 78,
+                        pjok: 80
+                    },
+                    rataRata: 73.1
+                },
+                {
+                    id: 10,
+                    nama: "Ruth Yogi",
+                    program: "Keterampilan Komputer",
+                    nilai: {
+                        matematika: 80,
+                        bahasaIndonesia: 83,
+                        ipa: 85,
+                        ips: 87,
+                        pkn: 82,
+                        sbdp: 88,
+                        pjok: 90
+                    },
+                    rataRata: 85.0
+                }
+            ];
+        }
+
+        // Fungsi untuk menampilkan detail nilai siswa
+        function showNilaiDetail(siswaId) {
+            console.log('Tombol detail nilai diklik untuk ID:', siswaId);
+
+            // Cari data nilai dari data Papua
+            const nilaiData = window.PKBM.nilaiDataPapua.find(s => s.id === siswaId);
+            console.log('Data nilai ditemukan:', nilaiData);
+
+            if (nilaiData) {
+                showNilaiDetailManual(nilaiData);
+            } else {
+                console.error('Data nilai tidak ditemukan untuk ID:', siswaId);
+                alert('Anda ingin melihat nilai siswa?');
+            }
+        }
+
+        // Fungsi untuk menampilkan modal detail nilai
+        function showNilaiDetailManual(nilaiData) {
+            const modal = document.getElementById('detailModal');
+            const modalBody = document.getElementById('modalBody');
+
+            if (!modal || !modalBody) {
+                console.error('Modal tidak ditemukan!');
+                return;
+            }
+
+            modalBody.innerHTML = `
+                <div class="modal-profile">
+                    <div class="modal-profile-img">
+                        <div class="photo-placeholder" style="display: flex; background: var(--primary); color: white; width: 100px; height: 100px; border-radius: 50%; align-items: center; justify-content: center; margin: 0 auto 1rem;"><i class="fas fa-user-graduate" style="font-size: 2.5rem;"></i></div>
+                    </div>
+                    <h3>${nilaiData.nama}</h3>
+                    <div class="position">Program: ${nilaiData.program}</div>
+                </div>
+                
+                <div class="modal-details">
+                    <h4>Detail Nilai Semester Genap 2023</h4>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+                        <div style="text-align: center; padding: 1rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">${nilaiData.nilai.matematika}</div>
+                            <h5>Matematika</h5>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(65, 105, 225, 0.1); border-radius: 0.5rem;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: var(--accent);">${nilaiData.nilai.bahasaIndonesia}</div>
+                            <h5>Bahasa Indonesia</h5>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(255, 165, 0, 0.1); border-radius: 0.5rem;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: var(--secondary);">${nilaiData.nilai.ipa}</div>
+                            <h5>IPA</h5>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(220, 20, 60, 0.1); border-radius: 0.5rem;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: #dc143c;">${nilaiData.nilai.ips}</div>
+                            <h5>IPS</h5>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(148, 0, 211, 0.1); border-radius: 0.5rem;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: #9400d3;">${nilaiData.nilai.pkn}</div>
+                            <h5>PKN</h5>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(30, 144, 255, 0.1); border-radius: 0.5rem;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: #1e90ff;">${nilaiData.nilai.sbdp}</div>
+                            <h5>SBdP</h5>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(255, 69, 0, 0.1); border-radius: 0.5rem;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: #ff4500;">${nilaiData.nilai.pjok}</div>
+                            <h5>PJOK</h5>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem; text-align: center;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Nilai Rata-rata</h4>
+                        <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary);">${nilaiData.rataRata}</div>
+                        <p style="margin-top: 0.5rem;">
+                            ${nilaiData.rataRata >= 85 ? '<span style="color: var(--primary);"><i class="fas fa-trophy"></i> Sangat Baik</span>' :
+                    nilaiData.rataRata >= 75 ? '<span style="color: var(--accent);"><i class="fas fa-thumbs-up"></i> Baik</span>' :
+                        '<span style="color: var(--secondary);"><i class="fas fa-chart-line"></i> Cukup</span>'}
+                        </p>
+                    </div>
+                </div>
+            `;
+
+            // Tampilkan modal
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            console.log('Modal nilai ditampilkan');
+        }
+
+        // Setup modal events ketika halaman dimuat
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Halaman data nilai loaded');
+
+            const modal = document.getElementById('detailModal');
+            if (modal) {
+                const closeBtn = modal.querySelector('.close-modal');
+                if (closeBtn) {
+                    closeBtn.onclick = function () {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    };
+                }
+
+                // Close modal ketika klik di luar
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+
+                // Close modal dengan ESC key
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+
+            // Event listener untuk klik pada baris tabel
+            document.querySelectorAll('.data-table tbody tr').forEach(row => {
+                row.addEventListener('click', function (e) {
+                    // Jangan trigger jika yang diklik adalah tombol detail
+                    if (!e.target.closest('.btn-detail')) {
+                        const siswaId = parseInt(this.getAttribute('data-id'));
+                        showNilaiDetail(siswaId);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

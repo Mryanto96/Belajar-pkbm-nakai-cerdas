@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Pengeluaran PKBM Nakai Cerdas Belajar | Pusat Kegiatan Belajar Masyarakat</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-img">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">PKBM</span>
+                        <span class="logo-sub">Nakai Cerdas Belajar</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="../index.html">Beranda</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../profil/index.html">Profil</a>
+                    <div class="sub-menu">
+                        <a href="../profil/sejarah.html">Sejarah</a>
+                        <a href="../profil/visi-misi.html">Visi & Misi</a>
+                        <a href="../profil/program.html">Program</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../struktur/index.html">Struktur</a>
+                    <div class="sub-menu">
+                        <a href="../struktur/pengurus.html">Pengurus</a>
+                        <a href="../struktur/tutor.html">Tutor</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../siswa/index.html">Data Siswa</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../nilai/index.html">Nilai</a>
+                    <div class="sub-menu">
+                        <a href="../nilai/index.html">Data Nilai</a>
+                        <a href="../nilai/grafik.html">Grafik</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="index.html">LPJ & Keuangan</a>
+                    <div class="sub-menu">
+                        <a href="pemasukan.html">Pemasukan</a>
+                        <a href="pengeluaran.html">Pengeluaran</a>
+                        <a href="saldo.html">Saldo</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../gallery/index.html">Gallery</a>
+                </div>
+            </nav>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <br><br>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Laporan <span>Pengeluaran</span></h1>
+                <p>Detail seluruh pengeluaran operasional PKBM Nakai Cerdas Belajar periode Januari - Mei 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengeluaran Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Summary Card -->
+            <div class="card fade-in" style="margin-bottom: 3rem;">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
+                    <div>
+                        <h3>Total Pengeluaran</h3>
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--secondary);">Rp 5.100.000</div>
+                    </div>
+                    <div>
+                        <h3>Jumlah Transaksi</h3>
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--accent);">5</div>
+                    </div>
+                    <div>
+                        <h3>Rata-rata per Bulan</h3>
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--primary);">Rp 1.020.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="card fade-in">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Detail Transaksi Pengeluaran</h2>
+
+                <div class="table-container">
+                    <table class="data-table" id="pengeluaranTable">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Tanggal</th>
+                                <th>Item</th>
+                                <th>Kategori</th>
+                                <th>Jumlah</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>15 Jan 2023</td>
+                                <td>Buku Tulis</td>
+                                <td>Alat Tulis</td>
+                                <td>Rp 500.000</td>
+                                <td>Untuk peserta didik program keaksaraan</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>20 Feb 2023</td>
+                                <td>Bahan Kerajinan</td>
+                                <td>Bahan Praktek</td>
+                                <td>Rp 750.000</td>
+                                <td>Untuk program keterampilan kerajinan tangan</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>10 Mar 2023</td>
+                                <td>Honor Tutor</td>
+                                <td>Honorarium</td>
+                                <td>Rp 2.000.000</td>
+                                <td>Honor tutor bulan Maret</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>5 Apr 2023</td>
+                                <td>Sewa Tempat</td>
+                                <td>Operasional</td>
+                                <td>Rp 1.500.000</td>
+                                <td>Sewa ruang belajar bulan April</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>12 Mei 2023</td>
+                                <td>ATK</td>
+                                <td>Alat Tulis</td>
+                                <td>Rp 350.000</td>
+                                <td>Pembelian alat tulis kantor</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr style="background: rgba(255, 165, 0, 0.2); font-weight: bold;">
+                                <td colspan="4" style="text-align: right;">Total Pengeluaran:</td>
+                                <td>Rp 5.100.000</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Category Analysis -->
+            <div class="card fade-in delay-1" style="margin-top: 3rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Analisis Pengeluaran per Kategori</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(255, 165, 0, 0.1); border-radius: 0.5rem;">
+                        <h4>Honorarium</h4>
+                        <div style="font-size: 1.8rem; font-weight: bold; color: var(--secondary);">Rp 2.000.000</div>
+                        <p>39% dari total</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                        <h4>Operasional</h4>
+                        <div style="font-size: 1.8rem; font-weight: bold; color: var(--primary);">Rp 1.500.000</div>
+                        <p>29% dari total</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(65, 105, 225, 0.1); border-radius: 0.5rem;">
+                        <h4>Bahan Praktek</h4>
+                        <div style="font-size: 1.8rem; font-weight: bold; color: var(--accent);">Rp 750.000</div>
+                        <p>15% dari total</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(220, 20, 60, 0.1); border-radius: 0.5rem;">
+                        <h4>Alat Tulis</h4>
+                        <div style="font-size: 1.8rem; font-weight: bold; color: #dc143c;">Rp 850.000</div>
+                        <p>17% dari total</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly Breakdown -->
+            <div class="card fade-in delay-2" style="margin-top: 3rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Rincian Pengeluaran per Bulan</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(255, 165, 0, 0.1); border-radius: 0.5rem;">
+                        <h4>Januari</h4>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--secondary);">Rp 500.000</div>
+                        <p>Alat Tulis</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(255, 165, 0, 0.1); border-radius: 0.5rem;">
+                        <h4>Februari</h4>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--secondary);">Rp 750.000</div>
+                        <p>Bahan Praktek</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(255, 165, 0, 0.1); border-radius: 0.5rem;">
+                        <h4>Maret</h4>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--secondary);">Rp 2.000.000</div>
+                        <p>Honor Tutor</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(255, 165, 0, 0.1); border-radius: 0.5rem;">
+                        <h4>April</h4>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--secondary);">Rp 1.500.000</div>
+                        <p>Operasional</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(255, 165, 0, 0.1); border-radius: 0.5rem;">
+                        <h4>Mei</h4>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--secondary);">Rp 350.000</div>
+                        <p>Alat Tulis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Efficiency Analysis -->
+            <div class="cards-grid" style="margin-top: 3rem;">
+                <div class="card fade-in">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Efisiensi Pengeluaran</h3>
+
+                    <div style="margin-top: 1rem;">
+                        <div
+                            style="background: rgba(46, 139, 87, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <h4><i class="fas fa-check-circle" style="color: var(--primary);"></i> Pengeluaran Produktif
+                            </h4>
+                            <p>85% pengeluaran dialokasikan untuk kegiatan langsung mendukung pembelajaran</p>
+                        </div>
+
+                        <div
+                            style="background: rgba(65, 105, 225, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <h4><i class="fas fa-chart-pie" style="color: var(--accent);"></i> Alokasi Optimal</h4>
+                            <p>Distribusi pengeluaran sesuai dengan prioritas program dan kebutuhan</p>
+                        </div>
+
+                        <div style="background: rgba(255, 165, 0, 0.1); padding: 1rem; border-radius: 0.5rem;">
+                            <h4><i class="fas fa-bullseye" style="color: var(--secondary);"></i> Efektivitas Biaya</h4>
+                            <p>Rasio pengeluaran terhadap pemasukan berada pada level optimal (29%)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in delay-1">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Rekomendasi Pengelolaan</h3>
+
+                    <div style="margin-top: 1rem;">
+                        <div
+                            style="background: rgba(46, 139, 87, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <h4><i class="fas fa-lightbulb" style="color: var(--primary);"></i> Optimasi Honor</h4>
+                            <p>Pertimbangkan sistem honor berdasarkan beban mengajar dan hasil</p>
+                        </div>
+
+                        <div
+                            style="background: rgba(65, 105, 225, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <h4><i class="fas fa-shopping-cart" style="color: var(--accent);"></i> Pembelian Bulk</h4>
+                            <p>Pembelian bahan praktek dalam jumlah besar untuk efisiensi biaya</p>
+                        </div>
+
+                        <div style="background: rgba(255, 165, 0, 0.1); padding: 1rem; border-radius: 0.5rem;">
+                            <h4><i class="fas fa-chart-line" style="color: var(--secondary);"></i> Monitoring Rutin</h4>
+                            <p>Lakukan review bulanan terhadap pola pengeluaran</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Export Section -->
+            <div class="card fade-in delay-2" style="margin-top: 3rem; text-align: center;">
+                <h3>Ekspor Laporan Pengeluaran</h3>
+                <p>Download laporan pengeluaran dalam format PDF untuk dokumentasi resmi</p>
+
+                <div style="margin-top: 2rem;">
+                    <button class="btn btn-export" data-type="pengeluaran">
+                        <i class="fas fa-file-pdf"></i> Export PDF Laporan Pengeluaran
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="btn">
+                    <i class="fas fa-arrow-left"></i> Kembali ke LPJ & Keuangan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <div class="logo-text">
+                            <span class="logo-main">PKBM</span>
+                            <span class="logo-sub">Nakai Cerdas Belajar</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Membangun masyarakat cerdas dan mandiri melalui pendidikan nonformal</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PKBM Nakai Cerdas Belajar. All rights reserved. | Nakai Distrik Pulau Tiga</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/pdf-export.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Saldo PKBM Nakai Cerdas Belajar | Pusat Kegiatan Belajar Masyarakat</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-img">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">PKBM</span>
+                        <span class="logo-sub">Nakai Cerdas Belajar</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="../index.html">Beranda</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../profil/index.html">Profil</a>
+                    <div class="sub-menu">
+                        <a href="../profil/sejarah.html">Sejarah</a>
+                        <a href="../profil/visi-misi.html">Visi & Misi</a>
+                        <a href="../profil/program.html">Program</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../struktur/index.html">Struktur</a>
+                    <div class="sub-menu">
+                        <a href="../struktur/pengurus.html">Pengurus</a>
+                        <a href="../struktur/tutor.html">Tutor</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../siswa/index.html">Data Siswa</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../nilai/index.html">Nilai</a>
+                    <div class="sub-menu">
+                        <a href="../nilai/index.html">Data Nilai</a>
+                        <a href="../nilai/grafik.html">Grafik</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="index.html">LPJ & Keuangan</a>
+                    <div class="sub-menu">
+                        <a href="pemasukan.html">Pemasukan</a>
+                        <a href="pengeluaran.html">Pengeluaran</a>
+                        <a href="saldo.html">Saldo</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../gallery/index.html">Gallery</a>
+                </div>
+            </nav>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <br><br>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Laporan <span>Saldo</span></h1>
+                <p>Analisis perkembangan saldo dan kesehatan keuangan PKBM Nakai Cerdas Belajar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Saldo Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Financial Summary -->
+            <div class="cards-grid" style="margin-bottom: 3rem;">
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3>Saldo Akhir</h3>
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--primary); margin: 1rem 0;">
+                        Rp 12.400.000
+                    </div>
+                    <p>Per Mei 2023</p>
+                </div>
+
+                <div class="card fade-in delay-1">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Surplus/Defisit</h3>
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--accent); margin: 1rem 0;">
+                        Rp 12.400.000
+                    </div>
+                    <p>Pemasukan - Pengeluaran</p>
+                </div>
+
+                <div class="card fade-in delay-2">
+                    <div class="card-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Rasio Efisiensi</h3>
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--secondary); margin: 1rem 0;">
+                        29%
+                    </div>
+                    <p>Pengeluaran/Pemasukan</p>
+                </div>
+            </div>
+
+            <!-- Main Chart -->
+            <div class="card fade-in">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Perkembangan Saldo Keuangan</h2>
+
+                <div class="chart-container">
+                    <canvas id="keuanganChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Detailed Financial Analysis -->
+            <div class="cards-grid" style="margin-top: 3rem;">
+                <div class="card fade-in">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Ringkasan Keuangan</h3>
+
+                    <div style="margin-top: 1rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding: 1rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                            <div>
+                                <strong>Total Pemasukan</strong>
+                                <div style="color: var(--primary); font-size: 0.9rem;">Jan - Mei 2023</div>
+                            </div>
+                            <div style="font-weight: bold; color: var(--primary);">Rp 17.500.000</div>
+                        </div>
+
+                        <div
+                            style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding: 1rem; background: rgba(255, 165, 0, 0.1); border-radius: 0.5rem;">
+                            <div>
+                                <strong>Total Pengeluaran</strong>
+                                <div style="color: var(--secondary); font-size: 0.9rem;">Jan - Mei 2023</div>
+                            </div>
+                            <div style="font-weight: bold; color: var(--secondary);">Rp 5.100.000</div>
+                        </div>
+
+                        <div
+                            style="display: flex; justify-content: space-between; padding: 1rem; background: rgba(65, 105, 225, 0.1); border-radius: 0.5rem;">
+                            <div>
+                                <strong>Saldo Akhir</strong>
+                                <div style="color: var(--accent); font-size: 0.9rem;">Per Mei 2023</div>
+                            </div>
+                            <div style="font-weight: bold; color: var(--accent);">Rp 12.400.000</div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: 1.5rem; padding: 1rem; background: rgba(46, 139, 87, 0.2); border-radius: 0.5rem; text-align: center;">
+                        <h4>Status Keuangan</h4>
+                        <div style="font-size: 1.2rem; font-weight: bold; color: var(--primary);">Sangat Sehat</div>
+                        <p>Rasio efisiensi 29% (Ideal: 30-40%)</p>
+                    </div>
+                </div>
+
+                <div class="card fade-in delay-1">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Proyeksi Keuangan</h3>
+
+                    <div style="margin-top: 1rem;">
+                        <div
+                            style="background: rgba(46, 139, 87, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <h4><i class="fas fa-calendar" style="color: var(--primary);"></i> Sustainability</h4>
+                            <p>Dengan pengeluaran rata-rata Rp 1.020.000/bulan, saldo saat ini dapat mendukung
+                                operasional selama:</p>
+                            <div
+                                style="font-size: 1.5rem; font-weight: bold; color: var(--primary); text-align: center; margin: 0.5rem 0;">
+                                12 Bulan
+                            </div>
+                        </div>
+
+                        <div
+                            style="background: rgba(65, 105, 225, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <h4><i class="fas fa-target" style="color: var(--accent);"></i> Target 2024</h4>
+                            <p>Dengan pertumbuhan 50% jumlah siswa, proyeksi kebutuhan dana:</p>
+                            <div
+                                style="font-size: 1.2rem; font-weight: bold; color: var(--accent); text-align: center; margin: 0.5rem 0;">
+                                Rp 15.300.000
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(255, 165, 0, 0.1); padding: 1rem; border-radius: 0.5rem;">
+                            <h4><i class="fas fa-chart-line" style="color: var(--secondary);"></i> Break-even Point</h4>
+                            <p>Dengan pemasukan dan pengeluaran saat ini, break-even tercapai pada:</p>
+                            <div
+                                style="font-size: 1.2rem; font-weight: bold; color: var(--secondary); text-align: center; margin: 0.5rem 0;">
+                                Rp 0 (Sudah tercapai)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in delay-2">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Analisis Kesehatan Keuangan</h3>
+
+                    <div style="margin-top: 1rem;">
+                        <div
+                            style="background: rgba(46, 139, 87, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <h4><i class="fas fa-heart" style="color: var(--primary);"></i> Likuiditas</h4>
+                            <div style="display: flex; align-items: center; margin-top: 0.5rem;">
+                                <div
+                                    style="flex: 1; background: rgba(46, 139, 87, 0.3); height: 10px; border-radius: 5px; overflow: hidden;">
+                                    <div style="width: 90%; height: 100%; background: var(--primary);"></div>
+                                </div>
+                                <span style="margin-left: 1rem; font-weight: bold; color: var(--primary);">90%</span>
+                            </div>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Kemampuan memenuhi kewajiban jangka pendek
+                            </p>
+                        </div>
+
+                        <div
+                            style="background: rgba(65, 105, 225, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <h4><i class="fas fa-shield-alt" style="color: var(--accent);"></i> Solvabilitas</h4>
+                            <div style="display: flex; align-items: center; margin-top: 0.5rem;">
+                                <div
+                                    style="flex: 1; background: rgba(65, 105, 225, 0.3); height: 10px; border-radius: 5px; overflow: hidden;">
+                                    <div style="width: 95%; height: 100%; background: var(--accent);"></div>
+                                </div>
+                                <span style="margin-left: 1rem; font-weight: bold; color: var(--accent);">95%</span>
+                            </div>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Kemampuan memenuhi kewajiban jangka
+                                panjang</p>
+                        </div>
+
+                        <div style="background: rgba(255, 165, 0, 0.1); padding: 1rem; border-radius: 0.5rem;">
+                            <h4><i class="fas fa-rocket" style="color: var(--secondary);"></i> Profitabilitas</h4>
+                            <div style="display: flex; align-items: center; margin-top: 0.5rem;">
+                                <div
+                                    style="flex: 1; background: rgba(255, 165, 0, 0.3); height: 10px; border-radius: 5px; overflow: hidden;">
+                                    <div style="width: 71%; height: 100%; background: var(--secondary);"></div>
+                                </div>
+                                <span style="margin-left: 1rem; font-weight: bold; color: var(--secondary);">71%</span>
+                            </div>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Kemampuan menghasilkan surplus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly Breakdown -->
+            <div class="card fade-in" style="margin-top: 3rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Perkembangan Bulanan</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                        <h4>Januari</h4>
+                        <div style="font-size: 1.2rem; font-weight: bold; color: var(--primary);">Rp 9.500.000</div>
+                        <p>Saldo Akhir</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                        <h4>Februari</h4>
+                        <div style="font-size: 1.2rem; font-weight: bold; color: var(--primary);">Rp 8.750.000</div>
+                        <p>Saldo Akhir</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                        <h4>Maret</h4>
+                        <div style="font-size: 1.2rem; font-weight: bold; color: var(--primary);">Rp 9.250.000</div>
+                        <p>Saldo Akhir</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                        <h4>April</h4>
+                        <div style="font-size: 1.2rem; font-weight: bold; color: var(--primary);">Rp 12.750.000</div>
+                        <p>Saldo Akhir</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                        <h4>Mei</h4>
+                        <div style="font-size: 1.2rem; font-weight: bold; color: var(--primary);">Rp 12.400.000</div>
+                        <p>Saldo Akhir</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="card fade-in delay-1"
+                style="margin-top: 3rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: var(--darker);">
+                <h2 style="text-align: center; margin-bottom: 1.5rem;">Rekomendasi Strategis</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                    <div
+                        style="background: rgba(5, 26, 16, 0.9); color: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4><i class="fas fa-hands-helping"></i> Investasi Program</h4>
+                        <p>Alokasikan dana untuk pengembangan program keterampilan yang menghasilkan pendapatan</p>
+                    </div>
+
+                    <div
+                        style="background: rgba(5, 26, 16, 0.9); color: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4><i class="fas fa-piggy-bank"></i> Dana Cadangan</h4>
+                        <p>Sisihkan 20% dari saldo untuk dana darurat dan investasi jangka panjang</p>
+                    </div>
+
+                    <div
+                        style="background: rgba(5, 26, 16, 0.9); color: white; padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4><i class="fas fa-chart-line"></i> Ekspansi Terkendali</h4>
+                        <p>Gunakan maksimal 50% dari surplus untuk ekspansi program baru</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Export Section -->
+            <div class="card fade-in delay-2" style="margin-top: 3rem; text-align: center;">
+                <h3>Ekspor Laporan Saldo Lengkap</h3>
+                <p>Download laporan saldo dan analisis keuangan dalam format PDF</p>
+
+                <div style="margin-top: 2rem;">
+                    <button class="btn btn-export" data-type="saldo">
+                        <i class="fas fa-file-pdf"></i> Export PDF Laporan Saldo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="btn">
+                    <i class="fas fa-arrow-left"></i> Kembali ke LPJ & Keuangan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <div class="logo-text">
+                            <span class="logo-main">PKBM</span>
+                            <span class="logo-sub">Nakai Cerdas Belajar</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Membangun masyarakat cerdas dan mandiri melalui pendidikan nonformal</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PKBM Nakai Cerdas Belajar. All rights reserved. | Nakai Distrik Pulau Tiga</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/charts.js"></script>
+    <script src="../js/pdf-export.js"></script>
+</body>
+
+</html>

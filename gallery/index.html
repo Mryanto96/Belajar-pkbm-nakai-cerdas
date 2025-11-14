@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery PKBM Nakai Cerdas Belajar | Pusat Kegiatan Belajar Masyarakat</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-img">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">PKBM</span>
+                        <span class="logo-sub">Nakai Cerdas Belajar</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="../index.html">Beranda</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../profil/index.html">Profil</a>
+                    <div class="sub-menu">
+                        <a href="../profil/sejarah.html">Sejarah</a>
+                        <a href="../profil/visi-misi.html">Visi & Misi</a>
+                        <a href="../profil/program.html">Program</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../struktur/index.html">Struktur</a>
+                    <div class="sub-menu">
+                        <a href="../struktur/pengurus.html">Pengurus</a>
+                        <a href="../struktur/tutor.html">Tutor</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../siswa/index.html">Data Siswa</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../nilai/index.html">Nilai</a>
+                    <div class="sub-menu">
+                        <a href="../nilai/index.html">Data Nilai</a>
+                        <a href="../nilai/grafik.html">Grafik</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../lpj/index.html">LPJ & Keuangan</a>
+                    <div class="sub-menu">
+                        <a href="../lpj/pemasukan.html">Pemasukan</a>
+                        <a href="../lpj/pengeluaran.html">Pengeluaran</a>
+                        <a href="../lpj/saldo.html">Saldo</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html">Gallery</a>
+                </div>
+            </nav>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <br><br>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Gallery <span>Kegiatan</span></h1>
+                <p>Dokumentasi kegiatan belajar mengajar dan program PKBM Nakai Cerdas Belajar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Category Filter -->
+            <div class="card fade-in" style="margin-bottom: 3rem; text-align: center;">
+                <h2 style="margin-bottom: 1.5rem;">Kategori Gallery</h2>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn btn-filter active" data-filter="all">Semua</button>
+                    <button class="btn btn-filter" data-filter="belajar">Kegiatan Belajar</button>
+                    <button class="btn btn-filter" data-filter="workshop">Workshop</button>
+                    <button class="btn btn-filter" data-filter="perayaan">Perayaan</button>
+                    <button class="btn btn-filter" data-filter="kegiatan">Kegiatan Lainnya</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Kegiatan Belajar -->
+                <div class="gallery-item fade-in" data-category="belajar">
+                    <img src="https://via.placeholder.com/400x300/2E8B57/FFFFFF?text=Kegiatan+Belajar+Matematika"
+                        alt="Kegiatan Belajar Matematika">
+                    <div class="gallery-caption">
+                        <h4>Sesi Belajar Matematika</h4>
+                        <p>Pembelajaran matematika dasar untuk program keaksaraan dengan pendekatan praktis</p>
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(240, 240, 240, 0.7);">
+                            <i class="fas fa-calendar"></i> 15 Januari 2023
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in delay-1" data-category="belajar">
+                    <img src="https://via.placeholder.com/400x300/4169E1/FFFFFF?text=Kelas+Bahasa+Indonesia"
+                        alt="Kelas Bahasa Indonesia">
+                    <div class="gallery-caption">
+                        <h4>Kelas Bahasa Indonesia</h4>
+                        <p>Pembelajaran membaca dan menulis untuk peserta didik program keaksaraan</p>
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(240, 240, 240, 0.7);">
+                            <i class="fas fa-calendar"></i> 20 Februari 2023
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workshop -->
+                <div class="gallery-item fade-in delay-2" data-category="workshop">
+                    <img src="https://via.placeholder.com/400x300/FFA500/FFFFFF?text=Workshop+Komputer+Dasar"
+                        alt="Workshop Komputer Dasar">
+                    <div class="gallery-caption">
+                        <h4>Workshop Komputer Dasar</h4>
+                        <p>Pelatihan penggunaan komputer dan internet untuk meningkatkan digital literacy</p>
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(240, 240, 240, 0.7);">
+                            <i class="fas fa-calendar"></i> 10 Maret 2023
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in" data-category="workshop">
+                    <img src="https://via.placeholder.com/400x300/DC143C/FFFFFF?text=Workshop+Kerajinan+Tangan"
+                        alt="Workshop Kerajinan Tangan">
+                    <div class="gallery-caption">
+                        <h4>Workshop Kerajinan Tangan</h4>
+                        <p>Pelatihan membuat kerajinan dari bahan lokal yang bernilai ekonomi</p>
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(240, 240, 240, 0.7);">
+                            <i class="fas fa-calendar"></i> 25 Maret 2023
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perayaan -->
+                <div class="gallery-item fade-in delay-1" data-category="perayaan">
+                    <img src="../Images/siswa1.png" alt="Perayaan Kelulusan">
+                    <div class="gallery-caption">
+                        <h4>Perayaan Kelulusan 2023</h4>
+                        <p>Wisuda pertama PKBM Nakai Cerdas Belajar untuk peserta didik program keaksaraan</p>
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(240, 240, 240, 0.7);">
+                            <i class="fas fa-calendar"></i> 15 April 2023
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in delay-2" data-category="perayaan">
+                    <img src="../Images/siswa2.png" alt="Hari Pendidikan Nasional">
+                    <div class="gallery-caption">
+                        <h4>Peringatan Hardiknas</h4>
+                        <p>Perayaan Hari Pendidikan Nasional dengan berbagai kegiatan edukatif</p>
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(240, 240, 240, 0.7);">
+                            <i class="fas fa-calendar"></i> 2 Mei 2023
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kegiatan Lainnya -->
+                <div class="gallery-item fade-in" data-category="kegiatan">
+                    <img src="../Images/pengurus1.png" alt="Kunjungan Dinas Pendidikan">
+                    <div class="gallery-caption">
+                        <h4>Kunjungan Dinas Pendidikan</h4>
+                        <p>Monitoring dan evaluasi dari Dinas Pendidikan setempat</p>
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(240, 240, 240, 0.7);">
+                            <i class="fas fa-calendar"></i> 8 April 2023
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in delay-1" data-category="kegiatan">
+                    <img src="https://via.placeholder.com/400x300/FF4500/FFFFFF?text=Rapat+Koordinasi+Pengurus"
+                        alt="Rapat Koordinasi Pengurus">
+                    <div class="gallery-caption">
+                        <h4>Rapat Koordinasi Pengurus</h4>
+                        <p>Evaluasi program dan perencanaan kegiatan triwulan berikutnya</p>
+                        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(240, 240, 240, 0.7);">
+                            <i class="fas fa-calendar"></i> 20 Mei 2023
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="card fade-in delay-2" style="margin-top: 3rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Statistik Dokumentasi</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary);">8</div>
+                        <p>Total Dokumentasi</p>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: bold; color: var(--accent);">4</div>
+                        <p>Kategori Kegiatan</p>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: bold; color: var(--secondary);">5</div>
+                        <p>Bulan Terdokumentasi</p>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: bold; color: #dc143c;">50+</div>
+                        <p>Peserta Terlibat</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Timeline -->
+            <div class="card fade-in" style="margin-top: 3rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Timeline Kegiatan</h2>
+
+                <div style="position: relative; max-width: 800px; margin: 0 auto;">
+                    <!-- Timeline Line -->
+                    <div
+                        style="position: absolute; left: 50%; transform: translateX(-50%); width: 4px; height: 100%; background: var(--primary);">
+                    </div>
+
+                    <!-- Timeline Items -->
+                    <div
+                        style="display: flex; justify-content: space-between; margin-bottom: 2rem; position: relative;">
+                        <div style="width: 45%; text-align: right; padding-right: 2rem;">
+                            <h4>Kegiatan Belajar Dimulai</h4>
+                            <p>Dimulainya program keaksaraan dan keterampilan komputer</p>
+                            <div style="color: var(--primary); font-size: 0.9rem;">
+                                <i class="fas fa-calendar"></i> 15 Jan 2023
+                            </div>
+                        </div>
+                        <div
+                            style="position: absolute; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; background: var(--primary); border-radius: 50%;">
+                        </div>
+                        <div style="width: 45%;"></div>
+                    </div>
+
+                    <div
+                        style="display: flex; justify-content: space-between; margin-bottom: 2rem; position: relative;">
+                        <div style="width: 45%;"></div>
+                        <div
+                            style="position: absolute; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; background: var(--primary); border-radius: 50%;">
+                        </div>
+                        <div style="width: 45%; text-align: left; padding-left: 2rem;">
+                            <h4>Workshop Komputer</h4>
+                            <p>Pelatihan komputer dasar untuk masyarakat</p>
+                            <div style="color: var(--primary); font-size: 0.9rem;">
+                                <i class="fas fa-calendar"></i> 10 Mar 2023
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="display: flex; justify-content: space-between; margin-bottom: 2rem; position: relative;">
+                        <div style="width: 45%; text-align: right; padding-right: 2rem;">
+                            <h4>Wisuda Pertama</h4>
+                            <p>Kelulusan peserta didik program keaksaraan</p>
+                            <div style="color: var(--primary); font-size: 0.9rem;">
+                                <i class="fas fa-calendar"></i> 15 Apr 2023
+                            </div>
+                        </div>
+                        <div
+                            style="position: absolute; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; background: var(--primary); border-radius: 50%;">
+                        </div>
+                        <div style="width: 45%;"></div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; position: relative;">
+                        <div style="width: 45%;"></div>
+                        <div
+                            style="position: absolute; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; background: var(--primary); border-radius: 50%;">
+                        </div>
+                        <div style="width: 45%; text-align: left; padding-left: 2rem;">
+                            <h4>Perayaan Hardiknas</h4>
+                            <p>Peringatan Hari Pendidikan Nasional</p>
+                            <div style="color: var(--primary); font-size: 0.9rem;">
+                                <i class="fas fa-calendar"></i> 2 Mei 2023
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="card fade-in delay-1"
+                style="margin-top: 3rem; text-align: center; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: var(--darker);">
+                <h2 style="margin-bottom: 1rem;">Ikuti Kegiatan Kami</h2>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">Mari bergabung dan menjadi bagian dari perjalanan
+                    pendidikan masyarakat Nakai Cerdas Belajar</p>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="../profil/program.html" class="btn"
+                        style="background: var(--darker); color: var(--primary);">
+                        <i class="fas fa-list"></i> Lihat Program
+                    </a>
+                    <a href="../siswa/index.html" class="btn" style="background: var(--darker); color: var(--primary);">
+                        <i class="fas fa-user-plus"></i> Daftar Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <div class="logo-text">
+                            <span class="logo-main">PKBM</span>
+                            <span class="logo-sub">Nakai Cerdas Belajar</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Membangun masyarakat cerdas dan mandiri melalui pendidikan nonformal</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PKBM Nakai Cerdas Belajar. All rights reserved. | Nakai Distrik Pulau Tiga</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Gallery Filter Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.btn-filter');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

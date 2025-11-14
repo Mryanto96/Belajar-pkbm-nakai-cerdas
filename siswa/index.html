@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Siswa PKBM Nakai Cerdas Belajar | Pusat Kegiatan Belajar Masyarakat</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-img">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">PKBM</span>
+                        <span class="logo-sub">Nakai Cerdas Belajar</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="../index.html">Beranda</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../profil/index.html">Profil</a>
+                    <div class="sub-menu">
+                        <a href="../profil/sejarah.html">Sejarah</a>
+                        <a href="../profil/visi-misi.html">Visi & Misi</a>
+                        <a href="../profil/program.html">Program</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../struktur/index.html">Struktur</a>
+                    <div class="sub-menu">
+                        <a href="../struktur/pengurus.html">Pengurus</a>
+                        <a href="../struktur/tutor.html">Tutor</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="index.html">Data Siswa</a>
+                    <div class="sub-menu">
+                        <a href="index.html">Data Siswa</a>
+                        <a href="statistik.html">Statistik</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../nilai/index.html">Nilai</a>
+                    <div class="sub-menu">
+                        <a href="../nilai/index.html">Data Nilai</a>
+                        <a href="../nilai/grafik.html">Grafik</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../lpj/index.html">LPJ & Keuangan</a>
+                    <div class="sub-menu">
+                        <a href="../lpj/pemasukan.html">Pemasukan</a>
+                        <a href="../lpj/pengeluaran.html">Pengeluaran</a>
+                        <a href="../lpj/saldo.html">Saldo</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../gallery/index.html">Gallery</a>
+                </div>
+            </nav>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <br><br>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Data <span>Siswa</span></h1>
+                <p>Informasi lengkap peserta didik PKBM Nakai Cerdas Belajar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Siswa Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Quick Stats -->
+            <div class="cards-grid" style="margin-bottom: 3rem;">
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Total Siswa</h3>
+                    <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary); margin: 1rem 0;">10</div>
+                    <p>Peserta didik aktif</p>
+                </div>
+
+                <div class="card fade-in delay-1">
+                    <div class="card-icon">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <h3>Siswa Laki-laki</h3>
+                    <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary); margin: 1rem 0;">6</div>
+                    <p>60% dari total siswa</p>
+                </div>
+
+                <div class="card fade-in delay-2">
+                    <div class="card-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>Siswa Perempuan</h3>
+                    <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary); margin: 1rem 0;">4</div>
+                    <p>40% dari total siswa</p>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="card fade-in">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Daftar Siswa PKBM Nakai Cerdas Belajar</h2>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Umur</th>
+                                <th>Program</th>
+                                <th>Tanggal Bergabung</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-id="1">
+                                <td>1</td>
+                                <td>Yohanis Kambu</td>
+                                <td>Laki-laki</td>
+                                <td>25</td>
+                                <td>Keaksaraan</td>
+                                <td>15 Januari 2023</td>
+                                <td><button class="btn-detail" onclick="showSiswaDetail(1)">Detail</button></td>
+                            </tr>
+                            <tr data-id="2">
+                                <td>2</td>
+                                <td>Martha Wenda</td>
+                                <td>Perempuan</td>
+                                <td>32</td>
+                                <td>Keterampilan Komputer</td>
+                                <td>20 Februari 2023</td>
+                                <td><button class="btn-detail" onclick="showSiswaDetail(2)">Detail</button></td>
+                            </tr>
+                            <tr data-id="3">
+                                <td>3</td>
+                                <td>Alberth Dimara</td>
+                                <td>Laki-laki</td>
+                                <td>28</td>
+                                <td>Kesetaraan Paket A</td>
+                                <td>10 Maret 2023</td>
+                                <td><button class="btn-detail" onclick="showSiswaDetail(3)">Detail</button></td>
+                            </tr>
+                            <tr data-id="4">
+                                <td>4</td>
+                                <td>Yuliana Tabuni</td>
+                                <td>Perempuan</td>
+                                <td>35</td>
+                                <td>Kerajinan Tangan</td>
+                                <td>5 April 2023</td>
+                                <td><button class="btn-detail" onclick="showSiswaDetail(4)">Detail</button></td>
+                            </tr>
+                            <tr data-id="5">
+                                <td>5</td>
+                                <td>Samuel Kogoya</td>
+                                <td>Laki-laki</td>
+                                <td>30</td>
+                                <td>Keaksaraan</td>
+                                <td>12 Mei 2023</td>
+                                <td><button class="btn-detail" onclick="showSiswaDetail(5)">Detail</button></td>
+                            </tr>
+                            <tr data-id="6">
+                                <td>6</td>
+                                <td>Debora Mabel</td>
+                                <td>Perempuan</td>
+                                <td>27</td>
+                                <td>Keterampilan Komputer</td>
+                                <td>18 Juni 2023</td>
+                                <td><button class="btn-detail" onclick="showSiswaDetail(6)">Detail</button></td>
+                            </tr>
+                            <tr data-id="7">
+                                <td>7</td>
+                                <td>Yakobus Noriwari</td>
+                                <td>Laki-laki</td>
+                                <td>33</td>
+                                <td>Kesetaraan Paket B</td>
+                                <td>22 Juli 2023</td>
+                                <td><button class="btn-detail" onclick="showSiswaDetail(7)">Detail</button></td>
+                            </tr>
+                            <tr data-id="8">
+                                <td>8</td>
+                                <td>Maria Wanimbo</td>
+                                <td>Perempuan</td>
+                                <td>29</td>
+                                <td>Kerajinan Tangan</td>
+                                <td>8 Agustus 2023</td>
+                                <td><button class="btn-detail" onclick="showSiswaDetail(8)">Detail</button></td>
+                            </tr>
+                            <tr data-id="9">
+                                <td>9</td>
+                                <td>Benny Wandikbo</td>
+                                <td>Laki-laki</td>
+                                <td>31</td>
+                                <td>Keaksaraan</td>
+                                <td>14 September 2023</td>
+                                <td><button class="btn-detail" onclick="showSiswaDetail(9)">Detail</button></td>
+                            </tr>
+                            <tr data-id="10">
+                                <td>10</td>
+                                <td>Ruth Yogi</td>
+                                <td>Perempuan</td>
+                                <td>26</td>
+                                <td>Keterampilan Komputer</td>
+                                <td>25 Oktober 2023</td>
+                                <td><button class="btn-detail" onclick="showSiswaDetail(10)">Detail</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Program Distribution -->
+            <div class="card fade-in delay-1" style="margin-top: 3rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Distribusi Program</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--primary);">3</div>
+                        <h4>Keaksaraan</h4>
+                        <p>30% dari total</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(65, 105, 225, 0.1); border-radius: 0.5rem;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--accent);">3</div>
+                        <h4>Keterampilan Komputer</h4>
+                        <p>30% dari total</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(255, 165, 0, 0.1); border-radius: 0.5rem;">
+                        <div style="font-size: 2rem; font-weight: bold; color: var(--secondary);">2</div>
+                        <h4>Kesetaraan</h4>
+                        <p>20% dari total</p>
+                    </div>
+
+                    <div
+                        style="text-align: center; padding: 1.5rem; background: rgba(220, 20, 60, 0.1); border-radius: 0.5rem;">
+                        <div style="font-size: 2rem; font-weight: bold; color: #dc143c;">2</div>
+                        <h4>Kerajinan Tangan</h4>
+                        <p>20% dari total</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="statistik.html" class="btn">
+                    <i class="fas fa-chart-bar"></i> Lihat Statistik Lengkap
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <div class="logo-text">
+                            <span class="logo-main">PKBM</span>
+                            <span class="logo-sub">Nakai Cerdas Belajar</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Membangun masyarakat cerdas dan mandiri melalui pendidikan nonformal</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PKBM Nakai Cerdas Belajar. All rights reserved. | Nakai Distrik Pulau Tiga</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/modal.js"></script>
+    <script>
+        // Data siswa Papua (tambahkan ke window.PKBM jika belum ada)
+        if (!window.PKBM) window.PKBM = {};
+        if (!window.PKBM.siswaDataPapua) {
+            window.PKBM.siswaDataPapua = [
+                {
+                    id: 1,
+                    nama: "Yohanis Kambu",
+                    jenisKelamin: "Laki-laki",
+                    umur: 25,
+                    program: "Keaksaraan",
+                    tanggalBergabung: "15 Januari 2023",
+                    foto: "../Images/siswa1.png",
+                    biodata: {
+                        namaLengkap: "Yohanis Kambu",
+                        tempatLahir: "Nakai, Pulau Tiga",
+                        tanggalLahir: "15 Maret 1998",
+                        alamat: "Kampung Nakai, Distrik Pulau Tiga",
+                        noTelepon: "081234567890",
+                        pendidikan: "SD Kelas 4"
+                    }
+                },
+                {
+                    id: 2,
+                    nama: "Martha Wenda",
+                    jenisKelamin: "Perempuan",
+                    umur: 32,
+                    program: "Keterampilan Komputer",
+                    tanggalBergabung: "20 Februari 2023",
+                    foto: "../Images/siswa2.png",
+                    biodata: {
+                        namaLengkap: "Martha Wenda",
+                        tempatLahir: "Nakai, Pulau Tiga",
+                        tanggalLahir: "10 Juli 1991",
+                        alamat: "Kampung Nakai, Distrik Pulau Tiga",
+                        noTelepon: "081234567891",
+                        pendidikan: "SD Kelas 5"
+                    }
+                },
+                {
+                    id: 3,
+                    nama: "Alberth Dimara",
+                    jenisKelamin: "Laki-laki",
+                    umur: 28,
+                    program: "Kesetaraan Paket A",
+                    tanggalBergabung: "10 Maret 2023",
+                    foto: "../Images/siswa1.png",
+                    biodata: {
+                        namaLengkap: "Alberth Dimara",
+                        tempatLahir: "Nakai, Pulau Tiga",
+                        tanggalLahir: "20 Mei 1995",
+                        alamat: "Kampung Nakai, Distrik Pulau Tiga",
+                        noTelepon: "081234567892",
+                        pendidikan: "SD Kelas 3"
+                    }
+                },
+                {
+                    id: 4,
+                    nama: "Yuliana Tabuni",
+                    jenisKelamin: "Perempuan",
+                    umur: 35,
+                    program: "Kerajinan Tangan",
+                    tanggalBergabung: "5 April 2023",
+                    foto: "../Images/siswa2.png",
+                    biodata: {
+                        namaLengkap: "Yuliana Tabuni",
+                        tempatLahir: "Nakai, Pulau Tiga",
+                        tanggalLahir: "15 Agustus 1988",
+                        alamat: "Kampung Nakai, Distrik Pulau Tiga",
+                        noTelepon: "081234567893",
+                        pendidikan: "SD Kelas 6"
+                    }
+                },
+                {
+                    id: 5,
+                    nama: "Samuel Kogoya",
+                    jenisKelamin: "Laki-laki",
+                    umur: 30,
+                    program: "Keaksaraan",
+                    tanggalBergabung: "12 Mei 2023",
+                    foto: "../Images/siswa1.png",
+                    biodata: {
+                        namaLengkap: "Samuel Kogoya",
+                        tempatLahir: "Nakai, Pulau Tiga",
+                        tanggalLahir: "30 November 1993",
+                        alamat: "Kampung Nakai, Distrik Pulau Tiga",
+                        noTelepon: "081234567894",
+                        pendidikan: "SD Kelas 4"
+                    }
+                },
+                {
+                    id: 6,
+                    nama: "Debora Mabel",
+                    jenisKelamin: "Perempuan",
+                    umur: 27,
+                    program: "Keterampilan Komputer",
+                    tanggalBergabung: "18 Juni 2023",
+                    foto: "../Images/siswa2.png",
+                    biodata: {
+                        namaLengkap: "Debora Mabel",
+                        tempatLahir: "Nakai, Pulau Tiga",
+                        tanggalLahir: "22 April 1996",
+                        alamat: "Kampung Nakai, Distrik Pulau Tiga",
+                        noTelepon: "081234567895",
+                        pendidikan: "SD Kelas 5"
+                    }
+                },
+                {
+                    id: 7,
+                    nama: "Yakobus Noriwari",
+                    jenisKelamin: "Laki-laki",
+                    umur: 33,
+                    program: "Kesetaraan Paket B",
+                    tanggalBergabung: "22 Juli 2023",
+                    foto: "../Images/siswa1.png",
+                    biodata: {
+                        namaLengkap: "Yakobus Noriwari",
+                        tempatLahir: "Nakai, Pulau Tiga",
+                        tanggalLahir: "18 September 1990",
+                        alamat: "Kampung Nakai, Distrik Pulau Tiga",
+                        noTelepon: "081234567896",
+                        pendidikan: "SMP Kelas 2"
+                    }
+                },
+                {
+                    id: 8,
+                    nama: "Maria Wanimbo",
+                    jenisKelamin: "Perempuan",
+                    umur: 29,
+                    program: "Kerajinan Tangan",
+                    tanggalBergabung: "8 Agustus 2023",
+                    foto: "../Images/siswa2.png",
+                    biodata: {
+                        namaLengkap: "Maria Wanimbo",
+                        tempatLahir: "Nakai, Pulau Tiga",
+                        tanggalLahir: "12 Desember 1994",
+                        alamat: "Kampung Nakai, Distrik Pulau Tiga",
+                        noTelepon: "081234567897",
+                        pendidikan: "SD Kelas 6"
+                    }
+                },
+                {
+                    id: 9,
+                    nama: "Benny Wandikbo",
+                    jenisKelamin: "Laki-laki",
+                    umur: 31,
+                    program: "Keaksaraan",
+                    tanggalBergabung: "14 September 2023",
+                    foto: "../Images/siswa1.png",
+                    biodata: {
+                        namaLengkap: "Benny Wandikbo",
+                        tempatLahir: "Nakai, Pulau Tiga",
+                        tanggalLahir: "8 Maret 1992",
+                        alamat: "Kampung Nakai, Distrik Pulau Tiga",
+                        noTelepon: "081234567898",
+                        pendidikan: "SD Kelas 3"
+                    }
+                },
+                {
+                    id: 10,
+                    nama: "Ruth Yogi",
+                    jenisKelamin: "Perempuan",
+                    umur: 26,
+                    program: "Keterampilan Komputer",
+                    tanggalBergabung: "25 Oktober 2023",
+                    foto: "../Images/siswa2.png",
+                    biodata: {
+                        namaLengkap: "Ruth Yogi",
+                        tempatLahir: "Nakai, Pulau Tiga",
+                        tanggalLahir: "30 Juni 1997",
+                        alamat: "Kampung Nakai, Distrik Pulau Tiga",
+                        noTelepon: "081234567899",
+                        pendidikan: "SD Kelas 5"
+                    }
+                }
+            ];
+        }
+
+        // Fungsi untuk menampilkan detail siswa
+        function showSiswaDetail(siswaId) {
+            console.log('Tombol detail diklik untuk ID:', siswaId);
+
+            // Cari data siswa dari data Papua
+            const siswaData = window.PKBM.siswaDataPapua.find(s => s.id === siswaId);
+            console.log('Data siswa ditemukan:', siswaData);
+
+            if (siswaData) {
+                showSiswaDetailManual(siswaData);
+            } else {
+                console.error('Data siswa tidak ditemukan untuk ID:', siswaId);
+                alert('Data siswa tidak ditemukan!');
+            }
+        }
+
+        // Fungsi untuk menampilkan modal detail siswa
+        function showSiswaDetailManual(siswaData) {
+            const modal = document.getElementById('detailModal');
+            const modalBody = document.getElementById('modalBody');
+
+            if (!modal || !modalBody) {
+                console.error('Modal tidak ditemukan!');
+                return;
+            }
+
+            modalBody.innerHTML = `
+                <div class="modal-profile">
+                    <div class="modal-profile-img">
+                        <img src="${siswaData.foto}" alt="${siswaData.nama}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="display: none;"><i class="fas fa-user-graduate"></i></div>
+                    </div>
+                    <h3>${siswaData.biodata.namaLengkap}</h3>
+                    <div class="position">Siswa PKBM Nakai Cerdas Belajar</div>
+                </div>
+                
+                <div class="modal-details">
+                    <h4>Biodata Lengkap</h4>
+                    <p><strong>Program:</strong> ${siswaData.program}</p>
+                    <p><strong>Jenis Kelamin:</strong> ${siswaData.jenisKelamin}</p>
+                    <p><strong>Umur:</strong> ${siswaData.umur} tahun</p>
+                    <p><strong>Tempat Lahir:</strong> ${siswaData.biodata.tempatLahir}</p>
+                    <p><strong>Tanggal Lahir:</strong> ${siswaData.biodata.tanggalLahir}</p>
+                    <p><strong>Alamat:</strong> ${siswaData.biodata.alamat}</p>
+                    <p><strong>No. Telepon:</strong> ${siswaData.biodata.noTelepon}</p>
+                    <p><strong>Pendidikan Terakhir:</strong> ${siswaData.biodata.pendidikan}</p>
+                    <p><strong>Tanggal Bergabung:</strong> ${siswaData.tanggalBergabung}</p>
+                    
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                        <h5 style="color: var(--primary); margin-bottom: 0.5rem;">Status:</h5>
+                        <p><i class="fas fa-circle" style="color: var(--primary); font-size: 0.8rem;"></i> Aktif mengikuti program ${siswaData.program}</p>
+                    </div>
+                </div>
+            `;
+
+            // Tampilkan modal
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            console.log('Modal ditampilkan');
+        }
+
+        // Setup modal events ketika halaman dimuat
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Halaman data siswa loaded');
+
+            const modal = document.getElementById('detailModal');
+            if (modal) {
+                const closeBtn = modal.querySelector('.close-modal');
+                if (closeBtn) {
+                    closeBtn.onclick = function () {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    };
+                }
+
+                // Close modal ketika klik di luar
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+
+                // Close modal dengan ESC key
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+
+            // Event listener untuk klik pada baris tabel
+            document.querySelectorAll('.data-table tbody tr').forEach(row => {
+                row.addEventListener('click', function (e) {
+                    // Jangan trigger jika yang diklik adalah tombol detail
+                    if (!e.target.closest('.btn-detail')) {
+                        const siswaId = parseInt(this.getAttribute('data-id'));
+                        showSiswaDetail(siswaId);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

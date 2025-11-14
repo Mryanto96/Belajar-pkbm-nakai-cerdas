@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Pengurus PKBM Nakai Cerdas Belajar | Pusat Kegiatan Belajar Masyarakat</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-img">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">PKBM</span>
+                        <span class="logo-sub">Nakai Cerdas Belajar</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="../index.html">Beranda</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../profil/index.html">Profil</a>
+                    <div class="sub-menu">
+                        <a href="../profil/sejarah.html">Sejarah</a>
+                        <a href="../profil/visi-misi.html">Visi & Misi</a>
+                        <a href="../profil/program.html">Program</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../struktur/index.html">Struktur</a>
+                    <div class="sub-menu">
+                        <a href="pengurus.html">Pengurus</a>
+                        <a href="../struktur/tutor.html">Tutor</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../siswa/index.html">Data Siswa</a>
+                    <div class="sub-menu">
+                        <a href="../siswa/index.html">Data Siswa</a>
+                        <a href="../siswa/statistik.html">Statistik</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../nilai/index.html">Nilai</a>
+                    <div class="sub-menu">
+                        <a href="../nilai/index.html">Data Nilai</a>
+                        <a href="../nilai/grafik.html">Grafik</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../lpj/index.html">LPJ & Keuangan</a>
+                    <div class="sub-menu">
+                        <a href="../lpj/pemasukan.html">Pemasukan</a>
+                        <a href="../lpj/pengeluaran.html">Pengeluaran</a>
+                        <a href="../lpj/saldo.html">Saldo</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../gallery/index.html">Gallery</a>
+                </div>
+            </nav>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <br><br>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Struktur <span>Pengurus</span></h1>
+                <p>Tim pengelola PKBM Nakai Cerdas Belajar yang bertanggung jawab atas manajemen dan operasional lembaga
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengurus Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Organizational Chart -->
+            <div class="card fade-in" style="margin-bottom: 3rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Struktur Organisasi Pengurus</h2>
+                <div class="org-structure">
+                    <div class="org-level">
+                        <div class="org-member" data-id="ketua">
+                            <div class="member-photo">
+                                <img src="../Images/pengurus1.png" alt="Ketua PKBM"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="photo-placeholder" style="display: none;"><i class="fas fa-user-tie"></i>
+                                </div>
+                            </div>
+                            <h3>Aurelius Santotinus Agung, S.Pd.</h3>
+                            <div class="position">Ketua PKBM</div>
+                            <p>Bertanggung jawab atas keseluruhan pengelolaan PKBM</p>
+                            <button class="btn-detail" onclick="showPengurusDetail('ketua')">Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="org-level">
+                        <div class="org-member" data-id="sekretaris">
+                            <div class="member-photo">
+                                <img src="../Images/pengurus2.png" alt="Sekretaris PKBM"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="photo-placeholder" style="display: none;"><i class="fas fa-user"></i></div>
+                            </div>
+                            <h3>Elviafri Saso, S.Pd.</h3>
+                            <div class="position">Sekretaris</div>
+                            <p>Mengelola administrasi dan dokumentasi PKBM</p>
+                            <button class="btn-detail" onclick="showPengurusDetail('sekretaris')">Detail</button>
+                        </div>
+                        <div class="org-member" data-id="bendahara">
+                            <div class="member-photo">
+                                <img src="../Images/pengurus1.png" alt="Bendahara PKBM"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="photo-placeholder" style="display: none;"><i class="fas fa-user"></i></div>
+                            </div>
+                            <h3>Nira Layuk Pake, S.Pd.</h3>
+                            <div class="position">Bendahara</div>
+                            <p>Mengelola keuangan dan aset PKBM</p>
+                            <button class="btn-detail" onclick="showPengurusDetail('bendahara')">Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tugas dan Tanggung Jawab -->
+            <div class="card fade-in delay-1">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Tugas dan Tanggung Jawab</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h3><i class="fas fa-crown" style="color: var(--primary); margin-right: 0.5rem;"></i> Ketua PKBM
+                        </h3>
+                        <ul style="margin-left: 1.5rem; line-height: 1.7;">
+                            <li>Memimpin dan mengkoordinasikan seluruh kegiatan PKBM</li>
+                            <li>Mewakili PKBM dalam hubungan dengan pihak eksternal</li>
+                            <li>Mengembangkan strategi dan kebijakan pengembangan lembaga</li>
+                            <li>Mengawasi pelaksanaan program dan kegiatan</li>
+                            <li>Bertanggung jawab atas pencapaian visi dan misi PKBM</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3><i class="fas fa-file-alt" style="color: var(--primary); margin-right: 0.5rem;"></i>
+                            Sekretaris</h3>
+                        <ul style="margin-left: 1.5rem; line-height: 1.7;">
+                            <li>Mengelola administrasi dan korespondensi PKBM</li>
+                            <li>Menyusun dan mendokumentasikan laporan kegiatan</li>
+                            <li>Mengelola arsip dan dokumentasi penting</li>
+                            <li>Mempersiapkan rapat dan mencatat notulensi</li>
+                            <li>Mengkoordinasikan sistem informasi dan data</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3><i class="fas fa-calculator" style="color: var(--primary); margin-right: 0.5rem;"></i>
+                            Bendahara</h3>
+                        <ul style="margin-left: 1.5rem; line-height: 1.7;">
+                            <li>Mengelola keuangan dan pembukuan PKBM</li>
+                            <li>Menyusun laporan keuangan secara berkala</li>
+                            <li>Mengelola pemasukan dan pengeluaran dana</li>
+                            <li>Mengawasi penggunaan aset dan inventaris</li>
+                            <li>Mempersiapkan laporan pertanggungjawaban keuangan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informasi Kontak -->
+            <div class="card fade-in delay-2" style="margin-top: 3rem; text-align: center;">
+                <h3>Informasi Kontak Pengurus</h3>
+                <p>Untuk konsultasi dan informasi lebih lanjut, dapat menghubungi pengurus PKBM Nakai Cerdas Belajar</p>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div style="background: rgba(46, 139, 87, 0.1); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4><i class="fas fa-user-tie"></i> Ketua PKBM</h4>
+                        <p>John Doe</p>
+                        <p><i class="fas fa-phone"></i> 0812-3456-7891</p>
+                        <p><i class="fas fa-envelope"></i> ketua@pkbmnakai.sch.id</p>
+                    </div>
+
+                    <div style="background: rgba(46, 139, 87, 0.1); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4><i class="fas fa-file-alt"></i> Sekretaris</h4>
+                        <p>Jane Smith</p>
+                        <p><i class="fas fa-phone"></i> 0812-3456-7892</p>
+                        <p><i class="fas fa-envelope"></i> sekretaris@pkbmnakai.sch.id</p>
+                    </div>
+
+                    <div style="background: rgba(46, 139, 87, 0.1); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h4><i class="fas fa-calculator"></i> Bendahara</h4>
+                        <p>Robert Brown</p>
+                        <p><i class="fas fa-phone"></i> 0812-3456-7893</p>
+                        <p><i class="fas fa-envelope"></i> bendahara@pkbmnakai.sch.id</p>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top: 2rem; padding: 1.5rem; background: rgba(46, 139, 87, 0.2); border-radius: 0.5rem;">
+                    <h4><i class="fas fa-clock"></i> Jam Kerja</h4>
+                    <p>Senin - Jumat: 08:00 - 16:00 WIT | Sabtu: 08:00 - 12:00 WIT</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="btn">Kembali ke Struktur</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <div class="logo-text">
+                            <span class="logo-main">PKBM</span>
+                            <span class="logo-sub">Nakai Cerdas Belajar</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Membangun masyarakat cerdas dan mandiri melalui pendidikan nonformal</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PKBM Nakai Cerdas Belajar. All rights reserved. | Nakai Distrik Pulau Tiga</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/modals.js"></script>
+    <script>
+        // Inisialisasi data pengurus
+        window.PKBM = window.PKBM || {};
+        window.PKBM.pengajarData = {
+            'ketua': {
+                nama: 'John Doe',
+                jabatan: 'Ketua PKBM',
+                foto: '../Images/pengurus1.png',
+                biodata: {
+                    tempatLahir: 'Nakai, Pulau Tiga',
+                    tanggalLahir: '15 Januari 1980',
+                    pendidikan: 'S1 Pendidikan - Universitas Papua',
+                    pengalaman: '15 tahun di bidang pendidikan nonformal',
+                    noTelepon: '0812-3456-7891',
+                    email: 'ketua@pkbmnakai.sch.id'
+                }
+            },
+            'sekretaris': {
+                nama: 'Jane Smith',
+                jabatan: 'Sekretaris',
+                foto: '../Images/pengurus2.png',
+                biodata: {
+                    tempatLahir: 'Nakai, Pulau Tiga',
+                    tanggalLahir: '20 Maret 1985',
+                    pendidikan: 'S1 Administrasi - Universitas Cenderawasih',
+                    pengalaman: '12 tahun di bidang administrasi pendidikan',
+                    noTelepon: '0812-3456-7892',
+                    email: 'sekretaris@pkbmnakai.sch.id'
+                }
+            },
+            'bendahara': {
+                nama: 'Robert Brown',
+                jabatan: 'Bendahara',
+                foto: '../Images/pengurus1.png',
+                biodata: {
+                    tempatLahir: 'Nakai, Pulau Tiga',
+                    tanggalLahir: '10 Juli 1978',
+                    pendidikan: 'S1 Ekonomi - Universitas Papua',
+                    pengalaman: '18 tahun di bidang keuangan dan akuntansi',
+                    noTelepon: '0812-3456-7893',
+                    email: 'bendahara@pkbmnakai.sch.id'
+                }
+            }
+        };
+
+        // Fungsi untuk menampilkan detail pengurus
+        function showPengurusDetail(pengurusId) {
+            const pengurusData = window.PKBM.pengajarData[pengurusId];
+            if (pengurusData && typeof window.showPengajarDetail === 'function') {
+                window.showPengajarDetail(pengurusData);
+            } else {
+                console.error('Data pengurus tidak ditemukan');
+                // Fallback: Tampilkan modal manual
+                showPengurusDetailManual(pengurusId);
+            }
+        }
+
+        // Fallback function jika modals.js tidak berfungsi
+        function showPengurusDetailManual(pengurusId) {
+            const pengurusData = window.PKBM.pengajarData[pengurusId];
+            if (!pengurusData) return;
+
+            const modal = document.getElementById('detailModal');
+            const modalBody = document.getElementById('modalBody');
+
+            if (!modal || !modalBody) return;
+
+            modalBody.innerHTML = `
+                <div class="modal-profile">
+                    <div class="modal-profile-img">
+                        <img src="${pengurusData.foto}" alt="${pengurusData.nama}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="display: none;"><i class="fas fa-user-tie"></i></div>
+                    </div>
+                    <h3>${pengurusData.nama}</h3>
+                    <div class="position">${pengurusData.jabatan}</div>
+                </div>
+                
+                <div class="modal-details">
+                    <h4>Biodata Pengurus</h4>
+                    <p><strong>Tempat Lahir:</strong> ${pengurusData.biodata.tempatLahir}</p>
+                    <p><strong>Tanggal Lahir:</strong> ${pengurusData.biodata.tanggalLahir}</p>
+                    <p><strong>Pendidikan:</strong> ${pengurusData.biodata.pendidikan}</p>
+                    <p><strong>Pengalaman:</strong> ${pengurusData.biodata.pengalaman}</p>
+                    <p><strong>No. Telepon:</strong> ${pengurusData.biodata.noTelepon}</p>
+                    <p><strong>Email:</strong> ${pengurusData.biodata.email}</p>
+                    
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(46, 139, 87, 0.1); border-radius: 0.5rem;">
+                        <h5 style="color: var(--primary); margin-bottom: 0.5rem;">Tugas Utama:</h5>
+                        <p>${getTugasPengurus(pengurusId)}</p>
+                    </div>
+                </div>
+            `;
+
+            // Tampilkan modal
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+
+            // Setup event listener untuk close button
+            const closeBtn = modal.querySelector('.close-modal');
+            if (closeBtn) {
+                closeBtn.onclick = function () {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                };
+            }
+
+            // Close modal ketika klik di luar
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close modal dengan ESC key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Fungsi untuk mendapatkan deskripsi tugas berdasarkan jabatan
+        function getTugasPengurus(pengurusId) {
+            const tugas = {
+                'ketua': 'Bertanggung jawab atas keseluruhan pengelolaan PKBM, memimpin tim, dan mewakili lembaga dalam hubungan eksternal.',
+                'sekretaris': 'Mengelola administrasi, dokumentasi, korespondensi, dan sistem informasi PKBM.',
+                'bendahara': 'Mengelola keuangan, pembukuan, aset, dan menyusun laporan pertanggungjawaban keuangan.'
+            };
+            return tugas[pengurusId] || 'Bertanggung jawab dalam pengelolaan PKBM Nakai Cerdas Belajar.';
+        }
+
+        // Inisialisasi ketika halaman dimuat
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Halaman pengurus loaded');
+
+            // Setup modal close events
+            const modal = document.getElementById('detailModal');
+            if (modal) {
+                const closeBtn = modal.querySelector('.close-modal');
+                if (closeBtn) {
+                    closeBtn.onclick = function () {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    };
+                }
+
+                // Close modal ketika klik di luar
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+
+                // Close modal dengan ESC key
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
