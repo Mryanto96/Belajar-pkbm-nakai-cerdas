@@ -1,5 +1,5 @@
 :root {
-    --primary: #3baf6d;
+    --primary: #1ce8ef;
     --primary-dark: #206941;
     --secondary: #FFA500;
     --accent: #4169E1;
@@ -82,6 +82,31 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
+/* tes logo */
+.logo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* Opsional - jika mau bulat */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    /* Penting untuk gambar */
+}
+
+.logo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* atau contain tergantung kebutuhan */
+    object-position: center;
+}
+
+
+
 
 /* ===== LOGO LAYOUT FIX ===== */
 .logo {
