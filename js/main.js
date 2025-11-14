@@ -388,7 +388,7 @@ const keuanganData = {
         },
     ],
 };
-
+//mantap jiwa
 // Data Pengajar
 const pengajarData = {
     ketua: {
