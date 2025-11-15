@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --primary: #00BFFF;
     --primary-dark: #007AA3;
     --secondary: #A300FF;
@@ -9,10 +9,10 @@
     --grid-color: rgba(0, 191, 255, 0.08);
     --card-bg: rgba(16, 16, 28, 0.9);
     --glow: 0 0 6px var(--primary), 0 0 16px var(--primary);
-}
+} */
 
 
-/* :root {
+:root {
     --primary: #1ce8ef;
     --primary-dark: #206941;
     --secondary: #FFA500;
@@ -23,7 +23,7 @@
     --grid-color: rgba(46, 139, 87, 0.1);
     --card-bg: rgba(10, 46, 31, 0.8);
     --glow: 0 0 4px var(--primary), 0 0 10px var(--primary);
-} */
+}
 
 * {
     margin: 0;
