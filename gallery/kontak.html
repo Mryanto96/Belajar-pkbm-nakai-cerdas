@@ -573,26 +573,29 @@
                 const whatsapp = document.getElementById('whatsapp').value.trim();
                 const message = document.getElementById('message').value.trim();
                 
-              // Format message untuk WhatsApp dengan array join
+             // Format message untuk WhatsApp dengan array join
                 const whatsappMessage = [
                     "========================",
                     "Halo PKBM Nakai Cerdas Belajar! 👋",
                     "========================",
-                    "",
+                    "", // Baris kosong untuk jarak
                     "📋 *INFORMASI PENGIRIM:*",
                     `• *Nama:* ${name}`,
                     `• *Email:* ${email}`,
                     whatsapp ? `• *WhatsApp:* ${whatsapp}` : '',
-                    "",
+                    "", // Baris kosong untuk jarak
                     "💬 *PESAN:*",
                     "========================",
                     message,
-                    "",
+                    "========================",
+                    "", // Baris kosong untuk jarak
                     "Saya berharap dapat mendengar kabar dari Anda segera.",
-                    "",
+                    "", // Baris kosong untuk jarak
                     `Salam hangat,`,
                     name
-                ].filter(line => line !== '').join('\n');
+                ].join('\n'); // HAPUS .filter() agar baris kosong tetap ada
+
+
                 // Encode message for URL
                 const encodedMessage = encodeURIComponent(whatsappMessage);
                 
