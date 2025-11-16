@@ -573,22 +573,26 @@
                 const whatsapp = document.getElementById('whatsapp').value.trim();
                 const message = document.getElementById('message').value.trim();
                 
-                // Format message for WhatsApp dengan format yang rapi
-                const whatsappMessage = `Halo PKBM Nakai Cerdas Belajar! 👋
-
-                Perkenalkan, nama saya:
-                • *Nama:* ${name}
-                • *Email:* ${email}
-                ${whatsapp ? `• *WhatsApp:* ${whatsapp}` : ''}
-
-                💬 *PESAN:*
-                ${message}
-
-                Saya berharap dapat mendengar kabar dari Anda segera.
-
-                Salam hangat,
-                ${name}`.trim();
-                
+              // Format message untuk WhatsApp dengan array join
+                const whatsappMessage = [
+                    "========================",
+                    "Halo PKBM Nakai Cerdas Belajar! 👋",
+                    "========================",
+                    "",
+                    "📋 *INFORMASI PENGIRIM:*",
+                    `• *Nama:* ${name}`,
+                    `• *Email:* ${email}`,
+                    whatsapp ? `• *WhatsApp:* ${whatsapp}` : '',
+                    "",
+                    "💬 *PESAN:*",
+                    "========================",
+                    message,
+                    "",
+                    "Saya berharap dapat mendengar kabar dari Anda segera.",
+                    "",
+                    `Salam hangat,`,
+                    name
+                ].filter(line => line !== '').join('\n');
                 // Encode message for URL
                 const encodedMessage = encodeURIComponent(whatsappMessage);
                 
