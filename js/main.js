@@ -589,6 +589,7 @@ function initMobileMenu() {
             }
         });
     });
+    
 // Yantho Rundy Code!
     // Close mobile menu when clicking outside
     document.addEventListener("click", function (event) {

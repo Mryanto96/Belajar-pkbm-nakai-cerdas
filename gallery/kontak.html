@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami | PKBM Nakai Cerdas Belajar</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        :root {
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+        }
+
+        .contact-hero {
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            padding: 6rem 0 3rem;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJyZ2JhKDAsMjQwLDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.3;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 1rem;
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        @media (min-width: 768px) {
+            .contact-method {
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+        }
+
+        .contact-method:hover {
+            transform: translateY(-3px);
+            border-color: rgba(0, 240, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 240, 255, 0.15);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--darker);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 768px) {
+            .contact-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+
+        .contact-details h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .contact-details p {
+            color: rgba(240, 240, 240, 0.8);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 768px) {
+            .contact-details h4 {
+                font-size: 1.2rem;
+            }
+            .contact-details p {
+                font-size: 1rem;
+            }
+        }
+
+        .contact-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .contact-link:hover {
+            color: var(--secondary);
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(0, 240, 255, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            .contact-form {
+                padding: 2.5rem;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--light);
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .form-group label {
+                font-size: 1rem;
+                margin-bottom: 0.8rem;
+            }
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(10, 10, 15, 0.6);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 0.5rem;
+            color: var(--light);
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            resize: vertical;
+        }
+
+        @media (min-width: 768px) {
+            .form-control {
+                padding: 1rem 1.2rem;
+                font-size: 1rem;
+                border-radius: 0.75rem;
+            }
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(0, 240, 255, 0.1);
+            background: rgba(10, 10, 15, 0.8);
+        }
+
+        .form-control::placeholder {
+            color: rgba(240, 240, 240, 0.5);
+            font-size: 0.9rem;
+        }
+
+        .optional-badge {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.8rem;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+            font-weight: 500;
+        }
+
+        .whatsapp-btn {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, var(--whatsapp-green) 0%, var(--whatsapp-dark) 100%);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-transform: none;
+            letter-spacing: 0.5px;
+        }
+
+        @media (min-width: 768px) {
+            .whatsapp-btn {
+                padding: 1.2rem 2rem;
+                font-size: 1.1rem;
+                border-radius: 0.75rem;
+                gap: 0.8rem;
+            }
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn:active {
+            transform: translateY(0);
+        }
+
+        .whatsapp-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .map-container {
+            margin-top: 3rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(0, 240, 255, 0.1);
+        }
+
+        .map-placeholder {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--dark) 100%);
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .map-placeholder {
+                height: 300px;
+                font-size: 1.2rem;
+            }
+        }
+
+        .required-star {
+            color: #ff4757;
+            margin-left: 0.2rem;
+        }
+
+        .form-header {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+        }
+
+        @media (min-width: 768px) {
+            .form-header {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Loading state */
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-img">
+                        <img src="../Images/logo/logo.png" alt="PKBM Nakai Cerdas Belajar">
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">PKBM</span>
+                        <span class="logo-sub">Nakai Cerdas Belajar</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="../index.html">Beranda</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../profil/index.html">Profil</a>
+                    <div class="sub-menu">
+                        <a href="../profil/sejarah.html">Sejarah</a>
+                        <a href="../profil/visi-misi.html">Visi & Misi</a>
+                        <a href="../profil/program.html">Program</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../struktur/index.html">Struktur</a>
+                    <div class="sub-menu">
+                        <a href="../struktur/pengurus.html">Pengurus</a>
+                        <a href="../struktur/tutor.html">Tutor</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../siswa/index.html">Data Siswa</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../nilai/index.html">Nilai</a>
+                    <div class="sub-menu">
+                        <a href="../nilai/index.html">Data Nilai</a>
+                        <a href="../nilai/grafik.html">Grafik</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="../lpj/index.html">LPJ & Keuangan</a>
+                    <div class="sub-menu">
+                        <a href="../lpj/pemasukan.html">Pemasukan</a>
+                        <a href="../lpj/pengeluaran.html">Pengeluaran</a>
+                        <a href="../lpj/saldo.html">Saldo</a>
+                    </div>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="index.html">Gallery</a>
+                    <div class="sub-menu">
+                        <a href="index.html">Gallery</a>
+                        <a href="kontak.html" class="active">Kontak Kami</a>
+                    </div>
+                </div>
+            </nav>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-text fade-in">
+                <h1>Hubungi <span>Kami</span></h1>
+                <p>Kami siap membantu Anda. Mari berdiskusi tentang pendidikan dan pengembangan masyarakat Nakai Cerdas Belajar bersama-sama.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info fade-in">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Lokasi Kami</h4>
+                            <p>Nakai Distrik Pulau Tiga</p>
+                            <p>Papua, Indonesia</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p>+62 822-5473-0476</p>
+                            <a href="https://wa.me/6282254730476" class="contact-link" target="_blank">
+                                Kirim Pesan Langsung <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@pkbm-nakaicerdas.sch.id</p>
+                            <a href="mailto:info@pkbm-nakaicerdas.sch.id" class="contact-link">
+                                Kirim Email <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Jumat: 08:00 - 16:00 WIT</p>
+                            <p>Sabtu: 08:00 - 12:00 WIT</p>
+                            <p>Minggu: Tutup</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form fade-in delay-1">
+                    <h2 class="form-header">Kirim Pesan ke WhatsApp</h2>
+                    
+                    <form id="whatsappForm">
+                        <div class="form-group">
+                            <label for="name">
+                                Nama Lengkap <span class="required-star">*</span>
+                            </label>
+                            <input type="text" id="name" class="form-control" placeholder="Masukkan nama lengkap Anda" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                Alamat Email <span class="required-star">*</span>
+                            </label>
+                            <input type="email" id="email" class="form-control" placeholder="nama@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsapp">
+                                Nomor WhatsApp 
+                                <span class="optional-badge">Opsional</span>
+                            </label>
+                            <input type="tel" id="whatsapp" class="form-control" placeholder="Ketik Nomor WhatsApp Anda">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">
+                                Pesan <span class="required-star">*</span>
+                            </label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="whatsapp-btn" id="submitBtn">
+                            <i class="fab fa-whatsapp"></i>
+                            Kirim via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-container fade-in delay-2">
+                <div class="map-placeholder">
+                    <div>
+                        <i class="fas fa-map-marked-alt" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <div>Lokasi PKBM Nakai Cerdas Belajar</div>
+                        <div style="font-size: 0.9rem; margin-top: 0.5rem; color: rgba(240, 240, 240, 0.7);">
+                            Nakai Distrik Pulau Tiga, Papua
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <div class="logo-text">
+                            <span class="logo-main">PKBM</span>
+                            <span class="logo-sub">Nakai Cerdas Belajar</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Membangun masyarakat cerdas dan mandiri melalui pendidikan nonformal</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PKBM Nakai Cerdas Belajar. All rights reserved. | Nakai Distrik Pulau Tiga</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('whatsappForm');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // Format WhatsApp number input
+            const whatsappInput = document.getElementById('whatsapp');
+            whatsappInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                
+                // Format: +62 812-3456-7890
+                if (value.startsWith('0')) {
+                    value = '62' + value.substring(1);
+                }
+                
+                if (value.length > 2) {
+                    value = '+62 ' + value.substring(2);
+                }
+                if (value.length > 7) {
+                    value = value.substring(0, 7) + '-' + value.substring(7);
+                }
+                if (value.length > 12) {
+                    value = value.substring(0, 12) + '-' + value.substring(12, 16);
+                }
+                
+                e.target.value = value;
+            });
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+                submitBtn.disabled = true;
+                form.classList.add('loading');
+                
+                // Get form values
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const whatsapp = document.getElementById('whatsapp').value.trim();
+                const message = document.getElementById('message').value.trim();
+                
+                // Format message for WhatsApp dengan format yang rapi
+                const whatsappMessage = `Halo PKBM Nakai Cerdas Belajar! 👋
+
+                Perkenalkan, nama saya:
+                • *Nama:* ${name}
+                • *Email:* ${email}
+                ${whatsapp ? `• *WhatsApp:* ${whatsapp}` : ''}
+
+                💬 *PESAN:*
+                ${message}
+
+                Saya berharap dapat mendengar kabar dari Anda segera.
+
+                Salam hangat,
+                ${name}`.trim();
+                
+                // Encode message for URL
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                
+                // Create WhatsApp URL
+                const whatsappUrl = `https://wa.me/6282254730476?text=${encodedMessage}`;
+                
+                // Delay untuk menunjukkan loading state
+                setTimeout(() => {
+                    // Open WhatsApp in new tab
+                    window.open(whatsappUrl, '_blank');
+                    
+                    // Show success message
+                    alert('Terima kasih! Anda akan diarahkan ke WhatsApp untuk mengirim pesan.');
+                    
+                    // Reset form dan button state
+                    form.reset();
+                    submitBtn.innerHTML = '<i class="fab fa-whatsapp"></i> Kirim via WhatsApp';
+                    submitBtn.disabled = false;
+                    form.classList.remove('loading');
+                }, 1000);
+            });
+
+            // Responsive font size adjustment
+            function adjustFontSize() {
+                const screenWidth = window.innerWidth;
+                const baseSize = screenWidth < 768 ? 14 : 16;
+                document.documentElement.style.fontSize = baseSize + 'px';
+            }
+
+            // Initial adjustment
+            adjustFontSize();
+            
+            // Adjust on resize
+            window.addEventListener('resize', adjustFontSize);
+        });
+    </script>
+    
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
