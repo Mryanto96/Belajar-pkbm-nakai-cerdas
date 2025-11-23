@@ -1,0 +1,8 @@
+{
+  "name": "my-static-site",
+  "version": "1.0.0",
+  "description": "Static HTML site",
+  "scripts": {
+    "build": "echo 'No build process needed'"
+  }
+}
